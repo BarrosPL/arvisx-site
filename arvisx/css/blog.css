@@ -1,0 +1,517 @@
+/* ==========================================================================
+   ARVISX AI — índice do blog, página de artigo e o Guia de Funil.
+
+   Carrega sempre DEPOIS de style.css: reaproveita as variáveis, os botões,
+   a navbar e o rodapé de lá, e acrescenta só o que é editorial.
+   ========================================================================== */
+
+.blog-page,
+.article-page {
+  min-height: 100vh;
+  background: var(--ivory);
+}
+
+/* ------------------------------- abertura --------------------------------- */
+
+.blog-hero,
+.article-hero {
+  padding: 190px 8vw 96px;
+  background: var(--night);
+  color: #fff;
+}
+
+.blog-hero h1,
+.article-hero h1 {
+  max-width: 940px;
+  font-size: clamp(44px, 6vw, 92px);
+}
+
+.blog-hero h1 em,
+.article-hero h1 em {
+  color: var(--gold);
+}
+
+.blog-hero > p:not(.eyebrow),
+.article-hero > p:not(.eyebrow) {
+  max-width: 620px;
+  margin: 28px 0 0;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #d5d8dc;
+}
+
+.article-hero .voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: var(--r-pill);
+  font: 800 12px var(--sans);
+  letter-spacing: 0.04em;
+  color: #f0e4bd;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.article-hero .voltar:hover {
+  border-color: var(--gold);
+  background: rgba(212, 175, 55, 0.12);
+}
+
+/* ----------------------------- índice do blog ------------------------------ */
+
+.blog-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 56px 8vw 0;
+}
+
+.blog-toolbar > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.blog-toolbar button {
+  padding: 11px 20px;
+  border: 1px solid var(--linha);
+  border-radius: var(--r-pill);
+  background: var(--carta);
+  font: 700 12px var(--sans);
+  letter-spacing: 0.02em;
+  color: #4c545e;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.blog-toolbar button:hover {
+  border-color: #c8bda3;
+}
+
+.blog-toolbar button.ativo {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--gold);
+}
+
+.blog-toolbar [data-contador] {
+  margin-left: auto;
+  font: 500 11px var(--mono);
+  letter-spacing: 0.1em;
+  color: #6f6a5e;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 34px 8vw 120px;
+}
+
+.blog-grid article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 290px;
+  border: 1px solid #ded7c8;
+  border-radius: var(--r);
+  background: var(--carta);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+/* A capa ocupa o topo do cartão em faixa fixa. Proporção travada para a
+   grade não desalinhar quando as fotos vêm com formatos diferentes. */
+.blog-grid article > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-grid article:hover > img {
+  transform: scale(1.04);
+}
+
+.blog-grid article > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 28px 30px 30px;
+}
+
+.blog-grid article:hover {
+  border-color: #cbbf9f;
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px rgba(19, 21, 36, 0.1);
+}
+
+/* O destaque ocupa a linha inteira, vira duas colunas (foto à esquerda,
+   texto à direita) e ganha o tratamento escuro. */
+.blog-grid article.destaque {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: stretch;
+  min-height: 340px;
+  border-color: transparent;
+  background: var(--night);
+  color: #fff;
+}
+
+.blog-grid article.destaque > img {
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+.blog-grid article.destaque > div {
+  justify-content: center;
+  padding: 44px;
+}
+
+.blog-grid article.destaque h2 {
+  margin: 22px 0 0;
+  font-size: clamp(28px, 3.2vw, 46px);
+}
+
+.blog-grid article.destaque h2 em {
+  color: var(--gold);
+}
+
+.blog-grid article.destaque small {
+  color: #b0b4ba;
+}
+
+.blog-grid article.destaque a {
+  color: var(--gold);
+}
+
+.blog-grid article > div > p {
+  margin: 0;
+  font: 500 11px var(--mono);
+  letter-spacing: 0.1em;
+  color: var(--bronze);
+}
+
+.blog-grid h2 {
+  margin: 20px 0 auto;
+  font-size: clamp(22px, 2.4vw, 34px);
+  line-height: 1.08;
+}
+
+.blog-grid small {
+  margin: 22px 0 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5c646d;
+}
+
+.blog-grid article > div > a {
+  font-size: 13px;
+  font-weight: 800;
+  color: #7d5d1a;
+}
+
+/* Deixa o cartão inteiro clicável sem aninhar <a> dentro de <a>. */
+.blog-grid article > div > a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+/* Fica depois de todas as regras de exibição do cartão — inclusive do
+   `display:grid` do destaque, que tem a mesma especificidade — senão o
+   `display:none` que o navegador aplica a [hidden] é sobrescrito e o filtro
+   por categoria não esconde nada. */
+.blog-grid article[hidden],
+.blog-grid article.destaque[hidden] {
+  display: none;
+}
+
+.blog-vazio {
+  grid-column: 1 / -1;
+  padding: 60px 0;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+/* -------------------------------- artigo ----------------------------------- */
+
+/* A capa sobe sobre o fim do hero escuro, amarrando a abertura ao texto. */
+.article-cover {
+  max-width: 1180px;
+  margin: -56px auto 0;
+  padding: 0 7vw;
+}
+
+.article-cover img {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  border-radius: var(--r-lg);
+  box-shadow: 0 30px 60px rgba(15, 19, 26, 0.24);
+}
+
+.article-cover + .article-content {
+  padding-top: 64px;
+}
+
+.article-content {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 720px);
+  justify-content: center;
+  gap: 80px;
+  padding: 86px 7vw 120px;
+}
+
+.article-content aside {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: max-content;
+  padding-top: 12px;
+}
+
+.article-content aside span {
+  margin-bottom: 6px;
+  font: 500 11px var(--mono);
+  letter-spacing: 0.1em;
+  color: #6d6558;
+}
+
+.article-content aside a {
+  padding-left: 12px;
+  border-left: 1px solid #d8cfbd;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #525a65;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.article-content aside a:hover,
+.article-content aside a.ativo {
+  border-color: var(--bronze);
+  color: var(--ink);
+}
+
+.article-content > div {
+  font-size: 18px;
+  line-height: 1.78;
+  color: #363d46;
+}
+
+.article-content .lead {
+  margin-top: 0;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.48;
+  color: #171d25;
+}
+
+.article-content section {
+  margin: 68px 0;
+  scroll-margin-top: 120px;
+}
+
+.article-content h2 {
+  margin: 10px 0 24px;
+  font-size: clamp(32px, 3.6vw, 52px);
+  color: var(--ink);
+}
+
+.article-content p + p {
+  margin-top: 22px;
+}
+
+.article-content ul {
+  margin: 24px 0;
+  padding-left: 2px;
+}
+
+.article-content li {
+  position: relative;
+  margin: 12px 0;
+  padding-left: 26px;
+}
+
+.article-content li::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.kicker {
+  margin: 0;
+  font: 500 11px var(--mono);
+  letter-spacing: 0.12em;
+  color: var(--bronze);
+}
+
+/* Diagrama de funil: quatro faixas que estreitam de cima para baixo. */
+.funnel-diagram {
+  margin: 40px 0;
+  padding: 26px;
+  border-radius: var(--r);
+  background: #19212a;
+}
+
+.funnel-diagram div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  height: 54px;
+  margin: 10px auto;
+  padding: 0 20px;
+  border-radius: var(--r-sm);
+  background: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  color: #15191f;
+}
+
+.funnel-diagram div:nth-child(2) { width: 79%; background: #d6b95d; }
+.funnel-diagram div:nth-child(3) { width: 59%; background: #b9872b; }
+.funnel-diagram div:nth-child(4) { width: 39%; background: #80611e; color: #fff; }
+
+.funnel-diagram span {
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.article-cta {
+  margin-top: 48px;
+  padding: 40px;
+  border-radius: var(--r);
+  background: #e8e0cc;
+}
+
+.article-cta p {
+  max-width: 380px;
+  margin: 0 0 24px;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+/* Crédito da pauta que originou o texto. */
+.article-fontes {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 0 7vw 90px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #656c74;
+}
+
+.article-fontes strong {
+  display: block;
+  margin-bottom: 6px;
+  font: 500 11px var(--mono);
+  letter-spacing: 0.12em;
+  color: var(--bronze);
+}
+
+.article-fontes a {
+  color: #6b5a2c;
+  text-decoration: underline;
+}
+
+/* Continue lendo, no pé do artigo. */
+.article-more {
+  padding: 0 7vw 110px;
+}
+
+.article-more > .eyebrow {
+  margin-bottom: 14px;
+}
+
+.article-more h2 {
+  margin-bottom: 34px;
+  font-size: clamp(30px, 3.4vw, 46px);
+}
+
+.article-more .blog-grid {
+  padding: 0;
+  max-width: none;
+}
+
+/* ------------------------------- responsivo --------------------------------- */
+
+@media (max-width: 1000px) {
+  .blog-grid article.destaque {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid article.destaque > img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .blog-grid article.destaque > div {
+    padding: 30px;
+  }
+
+  .article-content {
+    display: block;
+    padding: 56px 7vw 90px;
+  }
+
+  .article-cover + .article-content {
+    padding-top: 48px;
+  }
+
+  .article-content aside { display: none; }
+  .article-content .lead { font-size: 21px; }
+  .article-content section { margin: 52px 0; }
+}
+
+@media (max-width: 760px) {
+  .blog-hero,
+  .article-hero { padding: 128px 7vw 64px; }
+
+  .blog-toolbar { padding: 40px 7vw 0; }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+    padding: 26px 7vw 80px;
+  }
+
+  .blog-grid article { min-height: 0; }
+  .blog-grid article > div { padding: 24px 24px 26px; }
+
+  .article-cover {
+    margin-top: -32px;
+    padding: 0 7vw;
+  }
+
+  .article-cover img {
+    aspect-ratio: 3 / 2;
+    border-radius: var(--r);
+  }
+
+  .funnel-diagram div { font-size: 11px; padding: 0 14px; }
+  .funnel-diagram div:nth-child(2) { width: 86%; }
+  .funnel-diagram div:nth-child(3) { width: 72%; }
+  .funnel-diagram div:nth-child(4) { width: 58%; }
+
+  .article-cta { padding: 30px; }
+  .article-more { padding: 0 7vw 80px; }
+}

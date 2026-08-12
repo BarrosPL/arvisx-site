@@ -1,0 +1,417 @@
+[
+  {
+    "slug": "lead-esfria-em-trinta-minutos",
+    "titulo": "Por que o seu lead esfria em trinta minutos",
+    "subtitulo": "O tempo de primeira resposta é o indicador mais barato de arrumar e o mais caro de ignorar.",
+    "resumo": "Nenhum ajuste de criativo compensa um lead que esperou horas. Como olhar o tempo de resposta e o que fazer com ele.",
+    "categoria": "Inteligência Artificial",
+    "data": "2026-08-06",
+    "capa": "lead-esfria-em-trinta-minutos.jpg",
+    "capaAlt": "Mãos digitando em um celular, iluminadas pela tela em um ambiente escuro",
+    "capaCredito": {
+      "autor": "Gilles Lambert gilleslambert",
+      "licenca": "CC0",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Man_on_a_smartphone_(Unsplash).jpg"
+    },
+    "destaque": true,
+    "status": "publicado",
+    "origem": "manual",
+    "blocos": [
+      {
+        "tipo": "p",
+        "texto": "Existe uma janela curta entre a pessoa mandar a primeira mensagem e ela decidir que você não vai responder. Dentro dessa janela ela ainda está no assunto: acabou de ler o anúncio, acabou de pensar no problema, ainda tem o aplicativo aberto. Fora dela, você não está mais competindo com o concorrente — está competindo com o resto do dia dela."
+      },
+      {
+        "tipo": "p",
+        "texto": "É por isso que o tempo de primeira resposta costuma ser o gargalo mais caro de uma operação comercial e, ao mesmo tempo, o mais barato de corrigir. Não exige verba nova, criativo novo nem oferta nova. Exige que exista alguém, ou algo, respondendo."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O que realmente atrasa a primeira resposta"
+      },
+      {
+        "tipo": "p",
+        "texto": "Quase nunca é falta de vontade do time. É estrutura. O lead entra por um canal que ninguém monitora em tempo integral, cai numa caixa compartilhada onde todo mundo acha que outra pessoa vai pegar, ou chega fora do horário comercial — que é justamente quando boa parte das pessoas tem tempo de pesquisar um serviço."
+      },
+      {
+        "tipo": "p",
+        "texto": "Some a isso o custo de contexto: para responder bem, alguém precisa abrir o histórico, entender de onde a pessoa veio e qual anúncio ela clicou. Se essa informação está espalhada em três lugares, a resposta rápida vira impossível mesmo com o time inteiro disponível."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Como medir sem montar um painel novo"
+      },
+      {
+        "tipo": "p",
+        "texto": "Pegue as conversas iniciadas na semana passada e anote quanto tempo passou entre a mensagem do cliente e a primeira resposta humana ou automática. Não precisa de ferramenta: uma planilha com trinta linhas já mostra o padrão. Olhe a mediana, não a média — uma única resposta de dois dias distorce a média e esconde a realidade."
+      },
+      {
+        "tipo": "ul",
+        "itens": [
+          "Separe por canal: WhatsApp, Instagram e formulário costumam ter tempos muito diferentes.",
+          "Separe por horário: o buraco quase sempre está à noite e no fim de semana.",
+          "Marque quantos leads nunca receberam resposta nenhuma."
+        ]
+      },
+      {
+        "tipo": "p",
+        "texto": "Esse terceiro número costuma ser o mais desconfortável, e é o que paga a conta de qualquer projeto de automação."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Onde a inteligência artificial entra de verdade"
+      },
+      {
+        "tipo": "p",
+        "texto": "Um agente de IA bem construído não existe para simular um vendedor. Ele existe para garantir que a janela nunca feche: responde em segundos, entende a intenção, coleta os dados que a proposta vai exigir e registra tudo no CRM antes de passar para o humano."
+      },
+      {
+        "tipo": "p",
+        "texto": "O ganho não é só velocidade. É consistência. O agente aplica o mesmo critério às três da manhã de domingo e às três da tarde de terça, e o consultor recebe a conversa com contexto em vez de começar do zero."
+      },
+      {
+        "tipo": "p",
+        "texto": "Na ARVISX, esse é sempre o primeiro bloco que colocamos no ar em uma implantação — não porque é o mais sofisticado, mas porque é o que mais rápido devolve resultado visível."
+      }
+    ]
+  },
+  {
+    "slug": "crm-nao-e-agenda",
+    "titulo": "CRM não é agenda: o que muda quando o funil vira processo",
+    "subtitulo": "A ferramenta só começa a valer quando cada etapa tem dono, critério de passagem e próxima ação.",
+    "resumo": "Comprar CRM é fácil. Difícil é transformar o funil em processo com dono, critério e próxima ação em cada etapa.",
+    "categoria": "CRM & Funil",
+    "data": "2026-07-30",
+    "capa": "crm-nao-e-agenda.jpg",
+    "capaAlt": "Sala de reunião informal com poltronas amarelas, sofá de couro e mesa de centro",
+    "capaCredito": {
+      "autor": "Dan Gold danielcgold",
+      "licenca": "CC0",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Casual_Meeting_Room_(Unsplash).jpg"
+    },
+    "status": "publicado",
+    "origem": "manual",
+    "blocos": [
+      {
+        "tipo": "p",
+        "texto": "A maioria das empresas que diz ter CRM tem, na prática, uma lista de contatos com etiquetas coloridas. O time abre para registrar o que já aconteceu, não para decidir o que fazer agora. Quando o CRM só olha para trás, ele é um arquivo — e arquivo ninguém consulta."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Três perguntas que separam funil de lista"
+      },
+      {
+        "tipo": "p",
+        "texto": "Antes de discutir ferramenta, vale responder três coisas sobre cada etapa do seu funil. Se alguma resposta for vaga, o problema não é o software."
+      },
+      {
+        "tipo": "ul",
+        "itens": [
+          "Quem é o dono desta etapa? Uma pessoa, não uma área.",
+          "Qual é o critério objetivo para a oportunidade avançar para a próxima?",
+          "Qual é a próxima ação marcada e para quando?"
+        ]
+      },
+      {
+        "tipo": "p",
+        "texto": "Um funil em que toda oportunidade tem próxima ação com data não precisa de cobrança. A cobrança vira consequência do processo, e a reunião semanal deixa de ser sobre quem esqueceu o quê."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Menos etapas, mais clareza"
+      },
+      {
+        "tipo": "p",
+        "texto": "Existe uma tentação de criar uma etapa para cada nuance da negociação. O efeito é o oposto do esperado: quanto mais etapas, mais lugares para uma oportunidade parar sem que ninguém perceba, e menos confiável fica a taxa de conversão entre elas."
+      },
+      {
+        "tipo": "p",
+        "texto": "Comece com quatro ou cinco etapas que qualquer pessoa do time saiba nomear de cabeça. Se depois de dois meses uma delas nunca teve oportunidade parada, ela provavelmente não precisa existir."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O CRM como fonte única"
+      },
+      {
+        "tipo": "p",
+        "texto": "O ganho real aparece quando o CRM deixa de ser mais um lugar para registrar e passa a ser o único. Enquanto parte do histórico vive no WhatsApp pessoal do consultor e parte numa planilha paralela, nenhum relatório é confiável — e decisão tomada com número duvidoso custa caro."
+      },
+      {
+        "tipo": "p",
+        "texto": "É aqui que a automação deixa de ser luxo. Quando o registro é automático — a conversa entra, o agente qualifica, o campo é preenchido, a tarefa é criada — o CRM fica atualizado porque ninguém precisa lembrar de atualizá-lo."
+      }
+    ]
+  },
+  {
+    "slug": "automatizar-processo-confuso",
+    "titulo": "Automatizar processo confuso só acelera a confusão",
+    "subtitulo": "A ordem que funciona é sempre a mesma: entender, desenhar, padronizar e só então automatizar.",
+    "resumo": "Automação não conserta processo mal definido — ela replica o erro mais rápido e em escala. Por onde começar.",
+    "categoria": "Automação",
+    "data": "2026-07-23",
+    "capa": "automatizar-processo-confuso.jpg",
+    "capaAlt": "Linha de produção industrial com esteiras e estações de montagem enfileiradas",
+    "capaCredito": {
+      "autor": "Laempe",
+      "licenca": "CC BY-SA 3.0",
+      "pagina": "https://commons.wikimedia.org/wiki/File:APMC_Linie_2.jpg"
+    },
+    "status": "publicado",
+    "origem": "manual",
+    "blocos": [
+      {
+        "tipo": "p",
+        "texto": "Automação tem uma propriedade incômoda: ela é indiferente ao mérito do que executa. Se o processo é bom, ela entrega mais do que é bom. Se o processo é confuso, ela entrega confusão com velocidade e consistência impecáveis."
+      },
+      {
+        "tipo": "p",
+        "texto": "Por isso projetos de automação que começam pela ferramenta costumam terminar em frustração. O fluxo foi construído, funciona tecnicamente, e ainda assim ninguém consegue explicar por que o resultado não melhorou."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Entender antes de desenhar"
+      },
+      {
+        "tipo": "p",
+        "texto": "A primeira etapa não envolve tecnologia. É sentar com quem executa e escrever, passo a passo, o que acontece hoje entre o lead chegar e o contrato ser assinado — inclusive as exceções que todo mundo conhece e ninguém documentou."
+      },
+      {
+        "tipo": "p",
+        "texto": "Esse mapa quase sempre revela duas ou três decisões que dependem de julgamento pessoal e nunca foram acordadas. Enquanto elas não forem acordadas, não há o que automatizar: cada pessoa automatizaria uma regra diferente."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Padronizar é escolher o que deixa de ser possível"
+      },
+      {
+        "tipo": "p",
+        "texto": "Padronizar não é escrever um manual. É decidir, de forma explícita, que a partir de agora certas coisas não serão mais feitas de outro jeito. É uma decisão de gestão, não de tecnologia, e costuma ser a parte mais desconfortável do projeto."
+      },
+      {
+        "tipo": "p",
+        "texto": "A boa notícia é que o desconforto é curto. Um time que tem critério claro discute menos e decide mais rápido, mesmo que o critério não seja perfeito na primeira versão."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O que vale automatizar primeiro"
+      },
+      {
+        "tipo": "p",
+        "texto": "Comece pelo que é repetitivo, frequente e não exige julgamento: confirmação de reunião, lembrete de vencimento, envio de proposta padrão, atualização de etapa no CRM, distribuição de tarefa. São tarefas que ninguém sente falta de fazer à mão e que falham justamente por serem chatas."
+      },
+      {
+        "tipo": "ul",
+        "itens": [
+          "Repetitivo: acontece muitas vezes por semana.",
+          "Objetivo: a regra cabe em uma frase.",
+          "Reversível: se der errado, o custo é baixo e visível."
+        ]
+      },
+      {
+        "tipo": "p",
+        "texto": "Deixe para depois o que envolve negociação, exceção comercial e relacionamento. Não porque a tecnologia não daria conta de parte disso, mas porque o retorno é menor e o risco de ruído é maior."
+      }
+    ]
+  },
+  {
+    "slug": "conteudo-que-baixa-o-custo-do-anuncio",
+    "titulo": "O conteúdo que baixa o custo do seu anúncio",
+    "subtitulo": "Quando o blog responde as objeções que o time de vendas ouve todo dia, o criativo fica mais barato.",
+    "resumo": "Conteúdo e tráfego pago não competem por verba: um reduz o trabalho do outro quando falam da mesma objeção.",
+    "categoria": "Tráfego & Conteúdo",
+    "data": "2026-07-16",
+    "capa": "conteudo-que-baixa-o-custo-do-anuncio.jpg",
+    "capaAlt": "Painel publicitário iluminado em rua à noite, com fachada dourada ao fundo",
+    "capaCredito": {
+      "autor": "Elliott Brown from Birmingham, United Kingdom",
+      "licenca": "CC BY 2.0",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Selfridges,_Birmingham_-_orange_lights_at_night_-_Park_Street_-_billboard_-_Honda_(6452751625)_(2).jpg"
+    },
+    "status": "publicado",
+    "origem": "manual",
+    "blocos": [
+      {
+        "tipo": "p",
+        "texto": "A discussão entre investir em tráfego pago ou em conteúdo costuma ser mal colocada. Não são duas estratégias concorrendo pela mesma verba: são dois papéis diferentes dentro do mesmo funil. O anúncio compra atenção agora; o conteúdo reduz o quanto você precisa convencer depois."
+      },
+      {
+        "tipo": "h2",
+        "texto": "A objeção é a pauta"
+      },
+      {
+        "tipo": "p",
+        "texto": "A melhor lista de pautas de uma empresa não está numa ferramenta de palavra-chave. Está nas conversas que o time comercial teve na semana passada. Toda dúvida que aparece três vezes é um artigo, e todo artigo desses tem uma função clara: chegar antes da conversa."
+      },
+      {
+        "tipo": "p",
+        "texto": "Quando isso funciona, o efeito aparece na qualidade do lead e não só no volume. A pessoa chega tendo entendido o serviço, com a objeção principal já respondida, e a conversa começa vários passos à frente."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Prazos diferentes, papéis diferentes"
+      },
+      {
+        "tipo": "p",
+        "texto": "Anúncio entrega hoje e para quando você para de pagar. Conteúdo e SEO demoram para engrenar e continuam trabalhando depois. Tratar os dois com a mesma expectativa de prazo é o erro que faz empresa desistir de conteúdo no terceiro mês, exatamente quando ele começaria a render."
+      },
+      {
+        "tipo": "ul",
+        "itens": [
+          "Anúncio: testa mensagem, gera volume, valida oferta rápido.",
+          "Conteúdo: responde objeção, sustenta autoridade, compõe acervo.",
+          "SEO: transforma o acervo em demanda que chega sozinha."
+        ]
+      },
+      {
+        "tipo": "h2",
+        "texto": "O que muda com a busca por IA"
+      },
+      {
+        "tipo": "p",
+        "texto": "Uma parte crescente das pesquisas hoje termina em uma resposta gerada, não em uma lista de links. Isso não elimina o valor do conteúdo, mas muda o que faz um texto ser útil: material genérico e repetido perde espaço, enquanto texto com posição clara, exemplo concreto e informação que só quem opera teria continua sendo citado."
+      },
+      {
+        "tipo": "p",
+        "texto": "Na prática, é um bom filtro editorial. Se o artigo poderia ter sido escrito por qualquer empresa do seu setor, ele provavelmente não vale o esforço de publicar."
+      }
+    ]
+  },
+  {
+    "slug": "cinco-numeros-do-comercial",
+    "titulo": "Cinco números que explicam quase tudo no comercial",
+    "subtitulo": "Painel cheio de indicador é sintoma de que ninguém decidiu o que observar.",
+    "resumo": "Custo por lead qualificado, tempo de resposta, conversão por etapa, ciclo e receita por origem. O resto é ruído.",
+    "categoria": "Gestão & Dados",
+    "data": "2026-07-09",
+    "capa": "cinco-numeros-do-comercial.jpg",
+    "capaAlt": "Caderno aberto com anotações de métricas de campanha e um gráfico desenhado à mão",
+    "capaCredito": {
+      "autor": "rawpixel.com rawpixel",
+      "licenca": "CC0",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Marketing_plan_(Unsplash).jpg"
+    },
+    "status": "publicado",
+    "origem": "manual",
+    "blocos": [
+      {
+        "tipo": "p",
+        "texto": "Existe uma correlação incômoda entre o tamanho do painel e a dificuldade de tomar decisão. Quando tudo é indicador, nada é prioridade — e a reunião de resultados vira leitura de gráfico em vez de escolha do que mudar na semana."
+      },
+      {
+        "tipo": "p",
+        "texto": "Para operar um funil comercial, cinco números bastam. Não porque os outros sejam inúteis, mas porque estes cinco costumam apontar o gargalo sozinhos."
+      },
+      {
+        "tipo": "h2",
+        "texto": "1. Custo por lead qualificado"
+      },
+      {
+        "tipo": "p",
+        "texto": "Custo por lead, sem o qualificado, mede a eficiência do anúncio em gerar cliques em formulário. Custo por lead qualificado mede a eficiência do anúncio em gerar conversa que vale a pena. São coisas diferentes, e campanhas que ganham no primeiro frequentemente perdem no segundo."
+      },
+      {
+        "tipo": "h2",
+        "texto": "2. Tempo até a primeira resposta"
+      },
+      {
+        "tipo": "p",
+        "texto": "O indicador mais barato de melhorar. Olhe a mediana por canal e por faixa de horário, não a média geral."
+      },
+      {
+        "tipo": "h2",
+        "texto": "3. Conversão de cada etapa para a seguinte"
+      },
+      {
+        "tipo": "p",
+        "texto": "A taxa geral de conversão diz que existe um problema. A taxa por etapa diz onde ele está. Sem essa quebra, todo ajuste é aposta: mexe-se no criativo quando o gargalo estava no follow-up."
+      },
+      {
+        "tipo": "h2",
+        "texto": "4. Tempo médio de ciclo"
+      },
+      {
+        "tipo": "p",
+        "texto": "Da primeira conversa à assinatura. Serve para duas coisas: prever caixa com alguma honestidade e perceber, cedo, quando algo travou. Ciclo que aumenta sem mudança de oferta costuma ser sintoma de follow-up frouxo."
+      },
+      {
+        "tipo": "h2",
+        "texto": "5. Receita por origem"
+      },
+      {
+        "tipo": "p",
+        "texto": "Fecha o circuito. Sem ligar a receita à origem do lead, a decisão de investimento vira preferência pessoal. Com ela, fica claro qual canal merece mais verba e qual está gerando volume que não vira contrato."
+      },
+      {
+        "tipo": "p",
+        "texto": "Cinco números, atualizados sem depender de ninguém lembrar de preencher planilha. É por isso que a automação do registro vem antes do painel bonito: relatório construído sobre dado manual mede, na melhor das hipóteses, a disciplina do time."
+      }
+    ]
+  },
+  {
+    "slug": "agente-de-ia-nao-e-chatbot",
+    "titulo": "Agente de IA não é chatbot: a diferença aparece no funil",
+    "subtitulo": "Um responde perguntas. O outro executa etapas do processo comercial e devolve o resultado ao CRM.",
+    "resumo": "A distinção não é técnica, é operacional: o agente tem objetivo, critério e permissão para agir dentro do processo.",
+    "categoria": "Inteligência Artificial",
+    "data": "2026-07-02",
+    "capa": "agente-de-ia-nao-e-chatbot.jpg",
+    "capaAlt": "Corredor de um data center com fileiras de servidores iluminados em azul",
+    "capaCredito": {
+      "autor": "BalticServers.com",
+      "licenca": "CC BY-SA 3.0",
+      "pagina": "https://commons.wikimedia.org/wiki/File:BalticServers_data_center.jpg"
+    },
+    "status": "publicado",
+    "origem": "manual",
+    "blocos": [
+      {
+        "tipo": "p",
+        "texto": "Chatbot é uma palavra queimada por um bom motivo: durante anos ela significou uma árvore de menus que atrasava a conversa e terminava em \"digite 9 para falar com um atendente\". Quem passou por isso do lado do cliente tem toda razão em desconfiar."
+      },
+      {
+        "tipo": "p",
+        "texto": "A diferença entre aquilo e um agente de IA não está no modelo de linguagem. Está no que ele tem permissão para fazer."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Objetivo, critério e ação"
+      },
+      {
+        "tipo": "p",
+        "texto": "Um chatbot responde. Um agente é encarregado de uma etapa do processo e tem três coisas que o chatbot não tem: um objetivo definido, um critério para saber se cumpriu, e acesso aos sistemas para executar o que decidiu."
+      },
+      {
+        "tipo": "ul",
+        "itens": [
+          "Objetivo: qualificar a oportunidade segundo os critérios da empresa.",
+          "Critério: os campos obrigatórios preenchidos e a intenção classificada.",
+          "Ação: criar a oportunidade no CRM, agendar e notificar o consultor."
+        ]
+      },
+      {
+        "tipo": "p",
+        "texto": "É a terceira que muda o resultado. Sem acesso para agir, o melhor agente do mundo produz uma transcrição bonita que alguém ainda precisa transformar em tarefa."
+      },
+      {
+        "tipo": "h2",
+        "texto": "Especialista, não generalista"
+      },
+      {
+        "tipo": "p",
+        "texto": "Um único agente encarregado de tudo tende a fazer tudo mal. Funciona melhor quando cada etapa tem o seu: primeiro atendimento, qualificação, agendamento, proposta, cobrança, gestão do CRM. Cada um com escopo estreito, instrução específica e um jeito claro de passar o bastão."
+      },
+      {
+        "tipo": "p",
+        "texto": "Escopo estreito também é o que torna o erro gerenciável. Quando algo sai errado, dá para saber qual agente errou, em que etapa, e ajustar sem mexer no resto da operação."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O que continua sendo humano"
+      },
+      {
+        "tipo": "p",
+        "texto": "Definir a oferta, escolher o critério de qualificação, conduzir uma negociação complexa e construir confiança seguem sendo trabalho de gente. O agente não substitui isso — ele libera o tempo que hoje é gasto com o resto, que costuma ser a maior parte do dia."
+      }
+    ]
+  }
+]

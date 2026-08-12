@@ -1,0 +1,24 @@
+{
+  "name": "arvisx-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Servidor do site ARVISX AI e gerador automático do blog",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "gerar": "node src/cli.js gerar",
+    "publicar": "node src/cli.js publicar",
+    "render": "node src/cli.js render",
+    "render:site": "node src/cli.js render-site"
+  },
+  "dependencies": {
+    "@fastify/formbody": "^7.4.0",
+    "@fastify/static": "^7.0.4",
+    "fastify": "^4.28.1",
+    "node-cron": "^3.0.3"
+  }
+}

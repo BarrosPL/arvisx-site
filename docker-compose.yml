@@ -1,0 +1,28 @@
+# ==========================================================================
+# Para rodar a imagem localmente do jeito que ela vai rodar na VPS.
+# No EasyPanel prefira criar um App apontando para o repositório — assim o
+# painel cuida do domínio, do HTTPS e do volume.
+# ==========================================================================
+
+services:
+  arvisx:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      BASE_PATH: ""
+      SITE_URL: https://arvisx.ai
+      DATA_DIR: /app/data
+      ADMIN_USER: arvisx
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?defina ADMIN_PASSWORD}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:?defina OPENAI_API_KEY}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o}
+      CRON_AGENDA: "0 9 * * 2"
+      TZ_AGENDA: America/Sao_Paulo
+      AUTO_PUBLICAR: "false"
+    volumes:
+      - arvisx-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  arvisx-data:

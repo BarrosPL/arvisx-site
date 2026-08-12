@@ -1,0 +1,13 @@
+node_modules/
+server/node_modules/
+
+# Conteúdo gerado em execução — no servidor isto é um volume.
+server/data/
+
+# Segredos.
+server/.env
+.env
+
+*.log
+.DS_Store
+Thumbs.db

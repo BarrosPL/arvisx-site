@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Blog ARVISX AI</title>
+    <link>https://arvisx.ai/blog/</link>
+    <description>Inteligência artificial, CRM, automação e dados aplicados a operações comerciais.</description>
+    <language>pt-BR</language>
+    <item>
+      <title>Por que o seu lead esfria em trinta minutos</title>
+      <link>https://arvisx.ai/blog/lead-esfria-em-trinta-minutos.html</link>
+      <guid isPermaLink="true">https://arvisx.ai/blog/lead-esfria-em-trinta-minutos.html</guid>
+      <category>Inteligência Artificial</category>
+      <pubDate>Thu, 06 Aug 2026 09:00:00 GMT</pubDate>
+      <description>Nenhum ajuste de criativo compensa um lead que esperou horas. Como olhar o tempo de resposta e o que fazer com ele.</description>
+    </item>
+    <item>
+      <title>CRM não é agenda: o que muda quando o funil vira processo</title>
+      <link>https://arvisx.ai/blog/crm-nao-e-agenda.html</link>
+      <guid isPermaLink="true">https://arvisx.ai/blog/crm-nao-e-agenda.html</guid>
+      <category>CRM &amp; Funil</category>
+      <pubDate>Thu, 30 Jul 2026 09:00:00 GMT</pubDate>
+      <description>Comprar CRM é fácil. Difícil é transformar o funil em processo com dono, critério e próxima ação em cada etapa.</description>
+    </item>
+    <item>
+      <title>Automatizar processo confuso só acelera a confusão</title>
+      <link>https://arvisx.ai/blog/automatizar-processo-confuso.html</link>
+      <guid isPermaLink="true">https://arvisx.ai/blog/automatizar-processo-confuso.html</guid>
+      <category>Automação</category>
+      <pubDate>Thu, 23 Jul 2026 09:00:00 GMT</pubDate>
+      <description>Automação não conserta processo mal definido — ela replica o erro mais rápido e em escala. Por onde começar.</description>
+    </item>
+    <item>
+      <title>O conteúdo que baixa o custo do seu anúncio</title>
+      <link>https://arvisx.ai/blog/conteudo-que-baixa-o-custo-do-anuncio.html</link>
+      <guid isPermaLink="true">https://arvisx.ai/blog/conteudo-que-baixa-o-custo-do-anuncio.html</guid>
+      <category>Tráfego &amp; Conteúdo</category>
+      <pubDate>Thu, 16 Jul 2026 09:00:00 GMT</pubDate>
+      <description>Conteúdo e tráfego pago não competem por verba: um reduz o trabalho do outro quando falam da mesma objeção.</description>
+    </item>
+    <item>
+      <title>Cinco números que explicam quase tudo no comercial</title>
+      <link>https://arvisx.ai/blog/cinco-numeros-do-comercial.html</link>
+      <guid isPermaLink="true">https://arvisx.ai/blog/cinco-numeros-do-comercial.html</guid>
+      <category>Gestão &amp; Dados</category>
+      <pubDate>Thu, 09 Jul 2026 09:00:00 GMT</pubDate>
+      <description>Custo por lead qualificado, tempo de resposta, conversão por etapa, ciclo e receita por origem. O resto é ruído.</description>
+    </item>
+    <item>
+      <title>Agente de IA não é chatbot: a diferença aparece no funil</title>
+      <link>https://arvisx.ai/blog/agente-de-ia-nao-e-chatbot.html</link>
+      <guid isPermaLink="true">https://arvisx.ai/blog/agente-de-ia-nao-e-chatbot.html</guid>
+      <category>Inteligência Artificial</category>
+      <pubDate>Thu, 02 Jul 2026 09:00:00 GMT</pubDate>
+      <description>A distinção não é técnica, é operacional: o agente tem objetivo, critério e permissão para agir dentro do processo.</description>
+    </item>
+  </channel>
+</rss>
