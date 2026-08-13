@@ -20,11 +20,105 @@ import { config, caminhos } from "./config.js";
 import { gerarComSeguranca } from "./pipeline.js";
 import { renderTudo } from "./render.js";
 
+/* --------------------------- URLs sem extensão ----------------------------
+   O endereço que o visitante vê é o nome da página, não o arquivo por trás
+   dela: /funil e /blog/crm-nao-e-agenda, nunca /funil.html. São duas metades:
+
+     1. rewriteUrl, aqui, roda ANTES do roteamento e traduz a URL limpa para
+        o .html correspondente, quando ele existe em disco;
+     2. o hook onRequest, mais abaixo, faz o caminho inverso — quem chegar por
+        um link antigo terminado em .html leva 301 para a URL limpa.
+
+   Assim cada página tem um endereço só, o que também evita conteúdo
+   duplicado aos olhos do Google.
+   ========================================================================== */
+
+/* As páginas são poucas e estáveis, então guardar os acertos evita um
+   existsSync por requisição. As ausências ficam de fora do cache de
+   propósito: um post publicado agora precisa responder no mesmo instante. */
+const paginasResolvidas = new Set();
+
+function semBasePath(caminho) {
+  const base = config.basePath;
+  if (base && (caminho === base || caminho.startsWith(`${base}/`))) {
+    return caminho.slice(base.length) || "/";
+  }
+  return caminho;
+}
+
+/* Existe um .html por trás desta URL limpa? */
+function temPaginaHtml(caminho) {
+  if (paginasResolvidas.has(caminho)) return true;
+
+  const relativo = semBasePath(caminho);
+
+  /* Mesma ordem de prioridade das raízes estáticas registradas abaixo: o
+     conteúdo do volume ganha do que veio na imagem. */
+  const candidatos = relativo.startsWith("/blog/")
+    ? [
+        [caminhos.blogGerado, relativo.slice("/blog/".length)],
+        [caminhos.blogEstatico, relativo.slice("/blog/".length)],
+      ]
+    : [[config.siteDir, relativo.slice(1)]];
+
+  for (const [raiz, sufixo] of candidatos) {
+    const alvo = path.resolve(raiz, `${sufixo}.html`);
+
+    /* path.resolve() já absorveu qualquer ".." da URL; sem esta conferência
+       o existsSync viraria uma sonda do disco fora da pasta do site. */
+    if (!alvo.startsWith(path.resolve(raiz) + path.sep)) continue;
+
+    if (fs.existsSync(alvo)) {
+      paginasResolvidas.add(caminho);
+      return true;
+    }
+  }
+
+  return false;
+}
+
+function reescreverUrl(req) {
+  const [caminho, query] = req.url.split("?");
+
+  /* Pasta, arquivo com extensão (css, img, feed.xml) e rotas do servidor
+     (/admin, /healthz) passam intactos. */
+  if (caminho.endsWith("/") || path.extname(caminho)) return req.url;
+
+  let decodificado;
+  try {
+    decodificado = decodeURIComponent(caminho);
+  } catch {
+    return req.url;
+  }
+
+  if (!temPaginaHtml(decodificado)) return req.url;
+
+  return `${caminho}.html${query ? `?${query}` : ""}`;
+}
+
 const app = Fastify({
   logger: { level: process.env.LOG_LEVEL || "info" },
   /* O proxy do EasyPanel termina o TLS; sem isto o Fastify acha que tudo
      chega em http e os redirects saem com o esquema errado. */
   trustProxy: true,
+  rewriteUrl: reescreverUrl,
+});
+
+/* A outra metade: quem pedir o arquivo é mandado para o nome da página.
+   Vale para links antigos, para o que o Google já indexou e para quem digita
+   o .html na mão. É preciso olhar a URL original porque o rewriteUrl acima
+   já pode ter posto o .html de volta em req.url — comparar a versão reescrita
+   daria um laço de redirecionamento. */
+app.addHook("onRequest", (req, reply, done) => {
+  const [caminho, query] = (req.originalUrl || req.url).split("?");
+
+  if (!caminho.endsWith(".html")) return done();
+
+  const limpo = caminho.endsWith("/index.html")
+    ? caminho.slice(0, -"index.html".length)
+    : caminho.slice(0, -".html".length);
+
+  reply.redirect(301, `${limpo || "/"}${query ? `?${query}` : ""}`);
 });
 
 await app.register(formbody);

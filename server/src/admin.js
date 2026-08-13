@@ -250,7 +250,7 @@ function telaEdicao(post, base, mensagem) {
         ${
           post.status === "rascunho"
             ? `<button name="acao" value="publicar">Salvar e publicar</button>`
-            : `<a class="botao claro" href="${base}/blog/${post.slug}.html" target="_blank">Ver no site ↗</a>`
+            : `<a class="botao claro" href="${base}/blog/${post.slug}" target="_blank">Ver no site ↗</a>`
         }
       </div>
     </form>

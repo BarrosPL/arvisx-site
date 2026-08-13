@@ -6,6 +6,11 @@
    As classes usadas aqui são as de arvisx/css/style.css e blog.css.
    Todos os caminhos são relativos porque as páginas moram em blog/ e o site
    pode ser servido em / ou num prefixo.
+
+   Os links entre páginas não levam ".html": o servidor entrega /blog/slug a
+   partir de slug.html, e é esse endereço limpo que aparece no navegador.
+   Como o post é servido em /blog/slug, a base relativa continua sendo
+   /blog/ — por isso "../" chega na home e "./" no índice do blog.
    ========================================================================== */
 
 import fs from "node:fs";
@@ -83,37 +88,37 @@ ${navegacao()}`;
 function navegacao() {
   return `
   <nav class="nav" id="nav">
-    <a class="brand" href="../index.html" aria-label="ARVISX AI, início">
+    <a class="brand" href="../" aria-label="ARVISX AI, início">
       <img src="../img/arvisx-marca-branca.png" alt="ARVISX AI" width="168" height="23" />
     </a>
 
     <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">☰</button>
 
     <div class="nav-links" id="nav-links">
-      <a href="../index.html#solucoes">Soluções</a>
-      <a href="../index.html#agentes">Agentes de IA</a>
-      <a href="../index.html#clientes">Ecossistema</a>
-      <a href="../funil.html">Guia de Funil</a>
-      <a href="index.html">Blog</a>
-      <a class="nav-cta nav-cta-mobile" href="../index.html#contato">Diagnóstico estratégico <b>↗</b></a>
+      <a href="../#solucoes">Soluções</a>
+      <a href="../#agentes">Agentes de IA</a>
+      <a href="../#clientes">Ecossistema</a>
+      <a href="../funil">Guia de Funil</a>
+      <a href="./">Blog</a>
+      <a class="nav-cta nav-cta-mobile" href="../#contato">Diagnóstico estratégico <b>↗</b></a>
     </div>
 
-    <a class="nav-cta" href="../index.html#contato">Diagnóstico estratégico <b>↗</b></a>
+    <a class="nav-cta" href="../#contato">Diagnóstico estratégico <b>↗</b></a>
   </nav>`;
 }
 
 function rodape() {
   return `
   <footer class="rodape">
-    <a class="brand compacta" href="../index.html">
+    <a class="brand compacta" href="../">
       <img src="../img/arvisx-marca-branca.png" alt="ARVISX AI" width="140" height="19" />
     </a>
     <p>O elo inteligente do seu ecossistema. © ${ANO}</p>
     <nav aria-label="Rodapé">
-      <a href="../index.html#solucoes">Soluções</a>
-      <a href="../funil.html">Guia de Funil</a>
-      <a href="index.html">Blog</a>
-      <a href="../index.html#contato">Contato</a>
+      <a href="../#solucoes">Soluções</a>
+      <a href="../funil">Guia de Funil</a>
+      <a href="./">Blog</a>
+      <a href="../#contato">Contato</a>
     </nav>
   </footer>
 
@@ -131,7 +136,7 @@ function cartao(post, { destaque: emDestaque = false, prioridade = false } = {})
             <p>${emDestaque ? "DESTAQUE · " : ""}${escapar(post.categoria)}</p>
             <h2>${escapar(post.titulo)}</h2>
             <small>${dataLonga(post.data)} · ${escapar(post.leitura)} de leitura</small>
-            <a href="${escapar(post.slug)}.html">Ler o artigo ↗</a>
+            <a href="${escapar(post.slug)}">Ler o artigo ↗</a>
           </div>
         </article>`;
 }
@@ -200,7 +205,7 @@ export function renderPost(post, todos) {
     image: urlPublica(`/img/blog/${post.capa}`),
     author: { "@type": "Organization", name: "ARVISX AI" },
     publisher: { "@type": "Organization", name: "ARVISX AI" },
-    mainEntityOfPage: urlPublica(`/blog/${post.slug}.html`),
+    mainEntityOfPage: urlPublica(`/blog/${post.slug}`),
   };
 
   const sumario = secoes.length
@@ -255,13 +260,13 @@ ${secoes.map((s) => `        <a href="#${s.id}">${escapar(s.titulo)}</a>`).join(
   return `${cabecalho({
     titulo: `${post.titulo} | ARVISX AI`,
     descricao: post.resumo,
-    canonical: urlPublica(`/blog/${post.slug}.html`),
+    canonical: urlPublica(`/blog/${post.slug}`),
     imagem: urlPublica(`/img/blog/${post.capa}`),
   })}
 
   <main class="article-page">
     <header class="article-hero" id="abertura">
-      <a class="voltar" href="index.html">← VOLTAR AO BLOG</a>
+      <a class="voltar" href="./">← VOLTAR AO BLOG</a>
       <p class="eyebrow"><i></i> ${escapar(post.categoria)} · ${dataLonga(post.data)} · ${escapar(post.leitura)}</p>
       <h1>${escapar(post.titulo)}</h1>
       <p>${escapar(post.subtitulo)}</p>
@@ -293,7 +298,7 @@ ${secao.blocos.map((b) => corpoDoBloco(b)).join("\n")}
             contato([
               ["Assunto", post.titulo],
               ["Categoria", post.categoria],
-              ["Página", urlPublica(`/blog/${post.slug}.html`)],
+              ["Página", urlPublica(`/blog/${post.slug}`)],
             ]),
           )}" target="_blank" rel="noopener">Solicitar diagnóstico estratégico <span>↗</span></a>
         </div>
@@ -374,8 +379,8 @@ function renderFeed(posts) {
     .map(
       (p) => `    <item>
       <title>${escapar(p.titulo)}</title>
-      <link>${escapar(urlPublica(`/blog/${p.slug}.html`))}</link>
-      <guid isPermaLink="true">${escapar(urlPublica(`/blog/${p.slug}.html`))}</guid>
+      <link>${escapar(urlPublica(`/blog/${p.slug}`))}</link>
+      <guid isPermaLink="true">${escapar(urlPublica(`/blog/${p.slug}`))}</guid>
       <category>${escapar(p.categoria)}</category>
       <pubDate>${new Date(`${p.data}T09:00:00Z`).toUTCString()}</pubDate>
       <description>${escapar(p.resumo)}</description>
@@ -397,12 +402,12 @@ ${itens}
 }
 
 function renderSitemap(posts) {
-  const urls = [urlPublica("/"), urlPublica("/funil.html"), urlPublica("/blog/")]
+  const urls = [urlPublica("/"), urlPublica("/funil"), urlPublica("/blog/")]
     .map((u) => `  <url><loc>${escapar(u)}</loc></url>`)
     .concat(
       posts.map(
         (p) =>
-          `  <url><loc>${escapar(urlPublica(`/blog/${p.slug}.html`))}</loc><lastmod>${p.data}</lastmod></url>`,
+          `  <url><loc>${escapar(urlPublica(`/blog/${p.slug}`))}</loc><lastmod>${p.data}</lastmod></url>`,
       ),
     )
     .join("\n");

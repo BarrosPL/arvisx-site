@@ -51,7 +51,7 @@ try {
   } else if (comando === "gerar" || comando === "publicar") {
     const post = await gerarPost({ publicar: comando === "publicar" });
     console.log(`ok — "${post.titulo}" (${post.status})`);
-    console.log(`     blog/${post.slug}.html`);
+    console.log(`     /blog/${post.slug}`);
   } else {
     console.log("uso: node src/cli.js [gerar|publicar|render|render-site]");
     process.exit(1);
