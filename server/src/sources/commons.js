@@ -13,7 +13,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const API = "https://commons.wikimedia.org/w/api.php";
-const UA = "ArvisxBlog/1.0 (+https://arvisx.ai)";
+const UA = "ArvisxBlog/1.0 (+https://arvisx.com.br)";
 
 /* Arquivos que nunca servem de capa: vetores, mapas, brasões, capturas de
    tela e diagramas. O filtro é por nome porque a API não expõe categoria

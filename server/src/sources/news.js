@@ -67,7 +67,7 @@ async function buscarFeed(termo) {
   const url = `${BASE}?q=${encodeURIComponent(termo)}&hl=pt-BR&gl=BR&ceid=BR:pt-419`;
 
   const resposta = await fetch(url, {
-    headers: { "User-Agent": "ArvisxBlog/1.0 (+https://arvisx.ai)" },
+    headers: { "User-Agent": "ArvisxBlog/1.0 (+https://arvisx.com.br)" },
     signal: AbortSignal.timeout(20000),
   });
 
