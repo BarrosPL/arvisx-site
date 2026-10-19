@@ -25,7 +25,7 @@ const ANO = new Date().getFullYear();
 const FONTES_GOOGLE =
   "https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500" +
   "&family=Manrope:wght@400;500;600;700;800" +
-  "&family=Archivo:wdth,wght@100..125,500..800&display=swap";
+  "&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap";
 
 function urlPublica(caminho) {
   return `${config.siteUrl}${caminho}`;
@@ -81,6 +81,7 @@ function cabecalho({ titulo, descricao, canonical, imagem, tipo = "article" }) {
 </head>
 <body>
   <a class="pular" href="#abertura">Pular para o conteúdo</a>
+  <div class="grain" aria-hidden="true"></div>
 ${navegacao()}`;
 }
 
