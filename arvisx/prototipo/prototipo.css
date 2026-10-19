@@ -3,7 +3,7 @@
 
    Cor com significado: o azul (--sinal) é o que chega — canal, lead, dado;
    o dourado (--ouro) é o que a ARVISX entrega — conversão, ação, marca.
-   O lead nasce azul e vira dourado. Essa regra vale para o núcleo da hero,
+   O lead nasce azul e vira dourado. Essa regra vale para a onda da hero,
    o quadro do fluxo, o rótulo dos agentes e o fio da margem.
 
    Tipos: Archivo expandida nos títulos (conversa com o letreiro largo do
@@ -621,66 +621,6 @@ h2 em {
 
 @keyframes correr {
   to { transform: translateX(-100%); }
-}
-
-/* ------------------------- seletor do protótipo -------------------------
-   Só existe no protótipo, para comparar as opções da hero. */
-
-.seletor-prototipo {
-  position: fixed;
-  bottom: 16px;
-  left: 50%;
-  z-index: 60;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  max-width: calc(100% - 24px);
-  padding: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 12px;
-  background: rgba(10, 13, 19, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-  transform: translateX(-50%);
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.seletor-prototipo span {
-  padding: 0 8px 0 6px;
-  font: 500 10px var(--mono);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--fraco);
-}
-
-.seletor-prototipo button {
-  padding: 9px 12px;
-  border-radius: 8px;
-  font: 600 12.5px var(--sans);
-  color: var(--apoio);
-  transition: background 0.2s, color 0.2s;
-}
-
-.seletor-prototipo button b {
-  margin-right: 4px;
-  font: 500 11px var(--mono);
-  color: var(--ouro);
-}
-
-.seletor-prototipo button:hover {
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--texto);
-}
-
-.seletor-prototipo button[aria-pressed="true"] {
-  background: var(--ouro);
-  color: #0b0d12;
-}
-
-.seletor-prototipo button[aria-pressed="true"] b {
-  color: #0b0d12;
 }
 
 /* ----------------------------------- fio ----------------------------------- */
@@ -1940,7 +1880,6 @@ main {
 @media (max-width: 700px) {
   .hero { padding-top: 112px; }
 
-  .seletor-prototipo button { padding: 8px 10px; font-size: 11.5px; }
   .hero h1 { font-size: clamp(30px, 9.2vw, 44px); }
   .hero-sub { margin: 22px 0 28px; font-size: 16px; }
   .acoes .botao { width: 100%; justify-content: space-between; }

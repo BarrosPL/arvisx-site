@@ -4,8 +4,8 @@
    Sem framework. Cada bloco confere se a sua peça existe e tudo é
    progressivo: sem JS a página fica completa, só que parada.
 
-   Movimento reduzido é respeitado: com ele ligado, o núcleo vira um quadro
-   estático e nada se mexe. Para avaliar o protótipo numa máquina com o
+   Movimento reduzido é respeitado: com ele ligado, a onda da hero vira um
+   quadro estático e nada se mexe. Para avaliar o protótipo numa máquina com o
    movimento desligado, abra a página com ?movimento no fim do endereço.
    ========================================================================== */
 
