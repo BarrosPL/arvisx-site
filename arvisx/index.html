@@ -24,14 +24,13 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Archivo:wdth,wght@100..125,500..800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="alternate" type="application/rss+xml" title="Blog ARVISX AI" href="blog/feed.xml" />
 </head>
 <body>
   <a class="pular" href="#inicio">Pular para o conteúdo</a>
-  <div class="grain" aria-hidden="true"></div>
 
   <nav class="nav" id="nav">
     <a class="brand" href="#inicio" aria-label="ARVISX AI, início">
@@ -55,26 +54,50 @@
   <main>
     <!-- ------------------------------- hero ------------------------------- -->
     <section class="hero" id="inicio">
-      <!-- Foto de fundo. O véu e os brilhos por cima é que garantem a
-           leitura do texto — trocar a foto não quebra o contraste. -->
-      <img class="hero-fundo" src="img/hero-fundo.jpg" alt="" width="2400" height="1500" fetchpriority="high" />
-      <div class="hero-veu" aria-hidden="true"></div>
-      <div class="hero-glow glow-one" aria-hidden="true"></div>
-      <div class="hero-glow glow-two" aria-hidden="true"></div>
+      <div class="hero-grade" aria-hidden="true"></div>
 
-      <div class="hero-copy">
-        <p class="eyebrow"><i></i> O ELO INTELIGENTE DO SEU ECOSSISTEMA</p>
-        <h1>Marketing atrai.<br />A <strong>ARVISX</strong> faz converter.</h1>
-        <p class="hero-text">
-          Arquitetamos operações comerciais de alta performance com inteligência
-          artificial, CRM, automação, tráfego e conteúdo — todos trabalhando
-          como um só sistema.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#contato">Construir minha máquina de vendas <span>↗</span></a>
-          <a class="button ghost" href="funil">Entender o funil de vendas <span>↓</span></a>
+      <div class="hero-corpo">
+        <div class="hero-copy">
+          <p class="eyebrow"><i></i> O ELO INTELIGENTE DO SEU ECOSSISTEMA</p>
+          <h1>Marketing atrai.<br />A <strong>ARVISX</strong> <span class="junto">faz converter.</span></h1>
+          <p class="hero-text">
+            Arquitetamos operações comerciais de alta performance com inteligência
+            artificial, CRM, automação, tráfego e conteúdo — todos trabalhando
+            como um só sistema.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#contato">Construir minha máquina de vendas <span>↗</span></a>
+            <a class="button ghost" href="funil">Entender o funil de vendas <span>↓</span></a>
+          </div>
+          <p class="hero-nota">IA · CRM · SDR · ADS · DADOS — EM UMA ÚNICA OPERAÇÃO</p>
         </div>
-        <p class="hero-nota">IA · CRM · SDR · ADS · DADOS — EM UMA ÚNICA OPERAÇÃO</p>
+
+        <!-- O elo: os canais entram, passam pela ARVISX e saem como venda.
+             O main.js traça os fios entre as etiquetas e faz os leads
+             correrem por eles; sem JS a figura fica parada e legível. -->
+        <figure class="elo" data-elo role="img"
+          aria-label="Anúncios, conteúdo, WhatsApp e Instagram passam pela ARVISX e seguem para o CRM Kommo, o agendamento, a proposta e o pagamento.">
+          <svg class="elo-fios" aria-hidden="true"></svg>
+
+          <ul class="elo-lado elo-entradas">
+            <li>Anúncios</li>
+            <li>Conteúdo &amp; SEO</li>
+            <li>WhatsApp</li>
+            <li>Instagram</li>
+          </ul>
+
+          <div class="elo-hub">
+            <img src="img/arvisx-simbolo-branco.webp" alt="" width="260" height="179" />
+            <small>ARVISX FLOW</small>
+          </div>
+
+          <ul class="elo-lado elo-saidas">
+            <li>CRM Kommo</li>
+            <li>Agendamento</li>
+            <li>Proposta</li>
+            <li>Pagamento</li>
+          </ul>
+        </figure>
       </div>
 
       <!-- Marcas do ecossistema. O main.js clona a lista com aria-hidden para
