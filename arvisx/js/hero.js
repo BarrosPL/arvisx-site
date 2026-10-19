@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ARVISX AI — hero do protótipo: a onda de dados.
+   ARVISX AI — a onda de dados da hero (só na home).
 
    Um campo de pontos em perspectiva ondulando, como um terreno de dados.
    De tempos em tempos uma frente dourada vem do fundo até a frente: o dado
@@ -7,7 +7,7 @@
    antes de chegar na coluna do texto; no celular ocupa a área abaixo dele.
 
    Movimento reduzido: um quadro parado. ?movimento na URL força o movimento
-   numa máquina com ele desligado (só para avaliar o protótipo).
+   numa máquina com ele desligado.
    ========================================================================== */
 
 (function () {

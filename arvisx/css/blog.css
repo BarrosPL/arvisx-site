@@ -1,143 +1,174 @@
 /* ==========================================================================
-   ARVISX AI — índice do blog, página de artigo e o Guia de Funil.
+   ARVISX AI — páginas editoriais: o Guia de Funil, o índice do blog e o
+   artigo.
 
-   Carrega sempre DEPOIS de style.css: reaproveita as variáveis, os botões,
-   a navbar e o rodapé de lá, e acrescenta só o que é editorial.
+   Carrega sempre DEPOIS de style.css e reaproveita de lá as variáveis, o
+   topo, o rodapé, os botões e as etiquetas. Aqui fica só o que é editorial,
+   no mesmo visual da home: fundo escuro, linhas de 1px, ouro como destaque e
+   azul para o que é dado.
    ========================================================================== */
 
 .blog-page,
 .article-page {
   min-height: 100vh;
-  background: var(--ivory);
 }
 
-/* ------------------------------- abertura --------------------------------- */
+/* -------------------------------- abertura ----------------------------------
+   Mesma grade de prancha técnica da hero da home, mais baixa. */
 
 .blog-hero,
 .article-hero {
-  padding: 190px 8vw 96px;
-  background: var(--night);
-  color: #fff;
+  position: relative;
+  /* O recuo lateral alinha o conteúdo com a largura útil do site (a mesma
+     do topo e das seções da home), sem precisar de um invólucro. */
+  padding: 180px max(var(--lado), calc((100% - var(--largura)) / 2)) 88px;
+  border-bottom: 1px solid var(--linha);
+  background:
+    radial-gradient(45% 70% at 80% 30%, rgba(78, 168, 255, 0.07), transparent 70%),
+    var(--vazio);
+  overflow: hidden;
+}
+
+.blog-hero::before,
+.article-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(70% 90% at 70% 30%, #000 10%, transparent 75%);
+  -webkit-mask-image: radial-gradient(70% 90% at 70% 30%, #000 10%, transparent 75%);
+  pointer-events: none;
+}
+
+.blog-hero > *,
+.article-hero > * {
+  position: relative;
 }
 
 .blog-hero h1,
 .article-hero h1 {
-  max-width: 940px;
-  font-size: clamp(44px, 6vw, 92px);
+  max-width: 980px;
+  font-size: clamp(38px, 5vw, 74px);
 }
 
-.blog-hero h1 em,
-.article-hero h1 em {
-  color: var(--gold);
-}
-
-.blog-hero > p:not(.eyebrow),
-.article-hero > p:not(.eyebrow) {
-  max-width: 620px;
-  margin: 28px 0 0;
+.blog-hero > p:not(.etiqueta),
+.article-hero > p:not(.etiqueta) {
+  max-width: 640px;
+  margin-top: 26px;
   font-size: 17px;
   line-height: 1.75;
-  color: #d5d8dc;
+  color: var(--apoio);
 }
 
-.article-hero .voltar {
+.voltar {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 30px;
-  padding: 10px 18px;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: var(--r-pill);
-  font: 800 12px var(--sans);
-  letter-spacing: 0.04em;
-  color: #f0e4bd;
-  transition: border-color 0.25s, background 0.25s;
+  padding: 9px 14px;
+  border: 1px solid var(--linha-forte);
+  border-radius: var(--r-sm);
+  font: 500 11px var(--mono);
+  letter-spacing: 0.1em;
+  color: var(--apoio);
+  transition: border-color 0.25s, color 0.25s;
 }
 
-.article-hero .voltar:hover {
-  border-color: var(--gold);
-  background: rgba(212, 175, 55, 0.12);
+.voltar:hover {
+  border-color: var(--ouro);
+  color: var(--ouro);
 }
 
-/* ----------------------------- índice do blog ------------------------------ */
+/* ------------------------------ índice do blog ------------------------------ */
 
 .blog-toolbar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
-  max-width: 1240px;
+  max-width: var(--largura);
   margin: 0 auto;
-  padding: 56px 8vw 0;
+  padding: 56px var(--lado) 0;
+  box-sizing: content-box;
 }
 
 .blog-toolbar > div {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .blog-toolbar button {
-  padding: 11px 20px;
-  border: 1px solid var(--linha);
-  border-radius: var(--r-pill);
-  background: var(--carta);
-  font: 700 12px var(--sans);
-  letter-spacing: 0.02em;
-  color: #4c545e;
+  padding: 10px 16px;
+  border: 1px solid var(--linha-forte);
+  border-radius: var(--r-sm);
+  background: var(--painel);
+  font: 600 12.5px var(--sans);
+  color: var(--apoio);
   transition: background 0.25s, color 0.25s, border-color 0.25s;
 }
 
 .blog-toolbar button:hover {
-  border-color: #c8bda3;
+  border-color: var(--sinal);
+  color: var(--texto);
 }
 
 .blog-toolbar button.ativo {
-  border-color: var(--ink);
-  background: var(--ink);
-  color: var(--gold);
+  border-color: var(--ouro);
+  background: var(--ouro);
+  color: #0b0d12;
 }
 
 .blog-toolbar [data-contador] {
   margin-left: auto;
   font: 500 11px var(--mono);
-  letter-spacing: 0.1em;
-  color: #6f6a5e;
+  letter-spacing: 0.12em;
+  color: var(--fraco);
 }
 
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  max-width: 1240px;
+  gap: 14px;
+  max-width: var(--largura);
   margin: 0 auto;
-  padding: 34px 8vw 120px;
+  padding: 30px var(--lado) 120px;
+  box-sizing: content-box;
 }
 
 .blog-grid article {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   min-height: 290px;
-  border: 1px solid #ded7c8;
+  border: 1px solid var(--linha);
   border-radius: var(--r);
-  background: var(--carta);
+  background: linear-gradient(180deg, var(--painel), var(--fundo));
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  transition: transform 0.35s, border-color 0.35s;
 }
 
-/* A capa ocupa o topo do cartão em faixa fixa. Proporção travada para a
-   grade não desalinhar quando as fotos vêm com formatos diferentes. */
+.blog-grid article:hover {
+  transform: translateY(-4px);
+  border-color: var(--linha-forte);
+}
+
+/* A capa tem proporção travada (a grade não desalinha com fotos de formatos
+   diferentes) e um véu escuro no pé, para emendar no cartão. */
 .blog-grid article > img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  filter: saturate(0.85) brightness(0.9);
+  transition: transform 0.6s ease, filter 0.4s;
 }
 
 .blog-grid article:hover > img {
   transform: scale(1.04);
+  filter: saturate(1) brightness(1);
 }
 
 .blog-grid article > div {
@@ -145,26 +176,54 @@
   flex: 1;
   flex-direction: column;
   align-items: flex-start;
-  padding: 28px 30px 30px;
+  padding: 26px 28px 28px;
 }
 
-.blog-grid article:hover {
-  border-color: #cbbf9f;
-  transform: translateY(-6px);
-  box-shadow: 0 22px 44px rgba(19, 21, 36, 0.1);
+.blog-grid article > div > p {
+  font: 500 11px var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sinal);
 }
 
-/* O destaque ocupa a linha inteira, vira duas colunas (foto à esquerda,
-   texto à direita) e ganha o tratamento escuro. */
+.blog-grid h2 {
+  margin: 16px 0 auto;
+  font-size: clamp(19px, 1.9vw, 25px);
+  line-height: 1.15;
+}
+
+.blog-grid small {
+  margin: 22px 0 12px;
+  font: 500 11.5px var(--mono);
+  color: var(--fraco);
+}
+
+.blog-grid article > div > a {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ouro);
+}
+
+/* Deixa o cartão inteiro clicável sem aninhar <a> dentro de <a>. */
+.blog-grid article > div > a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+/* O destaque ocupa a linha inteira e vira duas colunas: foto à esquerda,
+   texto à direita, com um brilho dourado atrás do texto. */
 .blog-grid article.destaque {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1.05fr 1fr;
-  align-items: stretch;
-  min-height: 340px;
-  border-color: transparent;
-  background: var(--night);
-  color: #fff;
+  min-height: 360px;
+  border-color: var(--linha-forte);
+  background:
+    radial-gradient(60% 80% at 90% 20%, rgba(212, 175, 55, 0.12), transparent 70%),
+    linear-gradient(180deg, var(--painel), var(--fundo));
 }
 
 .blog-grid article.destaque > img {
@@ -177,55 +236,13 @@
   padding: 44px;
 }
 
+.blog-grid article.destaque > div > p {
+  color: var(--ouro);
+}
+
 .blog-grid article.destaque h2 {
-  margin: 22px 0 0;
-  font-size: clamp(28px, 3.2vw, 46px);
-}
-
-.blog-grid article.destaque h2 em {
-  color: var(--gold);
-}
-
-.blog-grid article.destaque small {
-  color: #b0b4ba;
-}
-
-.blog-grid article.destaque a {
-  color: var(--gold);
-}
-
-.blog-grid article > div > p {
-  margin: 0;
-  font: 500 11px var(--mono);
-  letter-spacing: 0.1em;
-  color: var(--bronze);
-}
-
-.blog-grid h2 {
-  margin: 20px 0 auto;
-  font-size: clamp(22px, 2.4vw, 34px);
-  line-height: 1.08;
-}
-
-.blog-grid small {
-  margin: 22px 0 12px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #5c646d;
-}
-
-.blog-grid article > div > a {
-  font-size: 13px;
-  font-weight: 800;
-  color: #7d5d1a;
-}
-
-/* Deixa o cartão inteiro clicável sem aninhar <a> dentro de <a>. */
-.blog-grid article > div > a::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
+  margin: 18px 0 0;
+  font-size: clamp(24px, 2.7vw, 40px);
 }
 
 /* Fica depois de todas as regras de exibição do cartão — inclusive do
@@ -241,24 +258,28 @@
   grid-column: 1 / -1;
   padding: 60px 0;
   font-size: 15px;
-  color: #6b7280;
+  color: var(--apoio);
 }
 
-/* -------------------------------- artigo ----------------------------------- */
+/* ---------------------------------- artigo ---------------------------------- */
 
-/* A capa sobe sobre o fim do hero escuro, amarrando a abertura ao texto. */
+/* A capa sobe sobre o pé da abertura, amarrando o topo ao texto. */
 .article-cover {
+  position: relative;
+  z-index: 1;
   max-width: 1180px;
-  margin: -56px auto 0;
-  padding: 0 7vw;
+  margin: -48px auto 0;
+  padding: 0 var(--lado);
+  box-sizing: content-box;
 }
 
 .article-cover img {
   width: 100%;
   aspect-ratio: 21 / 9;
   object-fit: cover;
+  border: 1px solid var(--linha-forte);
   border-radius: var(--r-lg);
-  box-shadow: 0 30px 60px rgba(15, 19, 26, 0.24);
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.9);
 }
 
 .article-cover + .article-content {
@@ -270,64 +291,68 @@
   grid-template-columns: 230px minmax(0, 720px);
   justify-content: center;
   gap: 80px;
-  padding: 86px 7vw 120px;
+  padding: 86px var(--lado) 120px;
 }
 
 .article-content aside {
   position: sticky;
-  top: 120px;
+  top: 110px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   height: max-content;
-  padding-top: 12px;
+  padding-top: 10px;
 }
 
 .article-content aside span {
   margin-bottom: 6px;
   font: 500 11px var(--mono);
-  letter-spacing: 0.1em;
-  color: #6d6558;
+  letter-spacing: 0.12em;
+  color: var(--fraco);
 }
 
 .article-content aside a {
   padding-left: 12px;
-  border-left: 1px solid #d8cfbd;
+  border-left: 1px solid var(--linha-forte);
   font-size: 13px;
   line-height: 1.45;
-  color: #525a65;
+  color: var(--apoio);
   transition: color 0.2s, border-color 0.2s;
 }
 
 .article-content aside a:hover,
 .article-content aside a.ativo {
-  border-color: var(--bronze);
-  color: var(--ink);
+  border-color: var(--ouro);
+  color: var(--texto);
 }
 
 .article-content > div {
   font-size: 18px;
-  line-height: 1.78;
-  color: #363d46;
+  line-height: 1.8;
+  color: #c3cad5;
 }
 
 .article-content .lead {
-  margin-top: 0;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 600;
-  line-height: 1.48;
-  color: #171d25;
+  line-height: 1.5;
+  color: var(--texto);
 }
 
 .article-content section {
   margin: 68px 0;
-  scroll-margin-top: 120px;
+  scroll-margin-top: 110px;
 }
 
 .article-content h2 {
-  margin: 10px 0 24px;
-  font-size: clamp(32px, 3.6vw, 52px);
-  color: var(--ink);
+  margin: 12px 0 24px;
+  font-size: clamp(26px, 2.8vw, 40px);
+  line-height: 1.08;
+  color: var(--texto);
+}
+
+.article-content strong {
+  color: var(--texto);
 }
 
 .article-content p + p {
@@ -336,7 +361,6 @@
 
 .article-content ul {
   margin: 24px 0;
-  padding-left: 2px;
 }
 
 .article-content li {
@@ -345,81 +369,108 @@
   padding-left: 26px;
 }
 
+/* O marcador é o mesmo losango das etiquetas. */
 .article-content li::before {
   content: "";
   position: absolute;
-  top: 13px;
+  top: 12px;
   left: 4px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--gold);
+  width: 6px;
+  height: 6px;
+  background: var(--ouro);
+  transform: rotate(45deg);
 }
 
 .kicker {
-  margin: 0;
   font: 500 11px var(--mono);
-  letter-spacing: 0.12em;
-  color: var(--bronze);
+  letter-spacing: 0.14em;
+  color: var(--ouro);
 }
 
-/* Diagrama de funil: quatro faixas que estreitam de cima para baixo. */
+/* Diagrama do funil: quatro faixas que estreitam. A de cima é azul (a
+   atenção que chega) e elas esquentam até o ouro na retenção. */
 .funnel-diagram {
   margin: 40px 0;
-  padding: 26px;
+  padding: 24px;
+  border: 1px solid var(--linha-forte);
   border-radius: var(--r);
-  background: #19212a;
+  background: linear-gradient(180deg, var(--painel), var(--fundo));
 }
 
 .funnel-diagram div {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 100%;
-  height: 54px;
+  gap: 12px;
+  height: 52px;
   margin: 10px auto;
-  padding: 0 20px;
+  padding: 0 18px;
+  border: 1px solid rgba(78, 168, 255, 0.45);
   border-radius: var(--r-sm);
-  background: var(--gold);
-  font-size: 12px;
-  font-weight: 800;
-  color: #15191f;
+  background: linear-gradient(90deg, rgba(78, 168, 255, 0.2), rgba(78, 168, 255, 0.08));
+  font: 600 12px var(--mono);
+  letter-spacing: 0.08em;
+  color: var(--texto);
 }
 
-.funnel-diagram div:nth-child(2) { width: 79%; background: #d6b95d; }
-.funnel-diagram div:nth-child(3) { width: 59%; background: #b9872b; }
-.funnel-diagram div:nth-child(4) { width: 39%; background: #80611e; color: #fff; }
+.funnel-diagram div:nth-child(2) {
+  width: 84%;
+  border-color: rgba(150, 170, 160, 0.45);
+  background: linear-gradient(90deg, rgba(150, 172, 150, 0.18), rgba(150, 172, 150, 0.06));
+}
+
+.funnel-diagram div:nth-child(3) {
+  width: 68%;
+  border-color: rgba(212, 175, 55, 0.5);
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.22), rgba(212, 175, 55, 0.08));
+}
+
+.funnel-diagram div:nth-child(4) {
+  width: 52%;
+  border-color: var(--ouro);
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.5), rgba(212, 175, 55, 0.22));
+  box-shadow: 0 0 30px -8px rgba(212, 175, 55, 0.6);
+}
 
 .funnel-diagram span {
-  font-size: 11px;
-  font-weight: 700;
-  opacity: 0.85;
+  white-space: nowrap;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--apoio);
 }
 
 .article-cta {
   margin-top: 48px;
   padding: 40px;
-  border-radius: var(--r);
-  background: #e8e0cc;
+  border: 1px solid var(--linha-forte);
+  border-radius: var(--r-lg);
+  background:
+    radial-gradient(70% 120% at 100% 0%, rgba(212, 175, 55, 0.14), transparent 70%),
+    var(--painel);
 }
 
 .article-cta p {
-  max-width: 380px;
-  margin: 0 0 24px;
-  font-size: 23px;
-  font-weight: 700;
-  line-height: 1.25;
-  color: var(--ink);
+  max-width: 420px;
+  margin: 0 0 26px;
+  font: 620 22px/1.25 var(--display);
+  font-stretch: 108%;
+  letter-spacing: -0.02em;
+  color: var(--texto);
 }
 
-/* Crédito da pauta que originou o texto. */
+.article-cta p + a {
+  margin-top: 0;
+}
+
+/* Crédito da foto e da pauta que originou o texto. */
 .article-fontes {
   max-width: 1030px;
   margin: 0 auto;
-  padding: 0 7vw 90px;
+  padding: 0 var(--lado) 90px;
+  box-sizing: content-box;
   font-size: 13px;
   line-height: 1.7;
-  color: #656c74;
+  color: var(--fraco);
 }
 
 .article-fontes strong {
@@ -427,91 +478,80 @@
   margin-bottom: 6px;
   font: 500 11px var(--mono);
   letter-spacing: 0.12em;
-  color: var(--bronze);
+  color: var(--ouro);
 }
 
 .article-fontes a {
-  color: #6b5a2c;
+  color: var(--apoio);
   text-decoration: underline;
 }
 
 /* Continue lendo, no pé do artigo. */
 .article-more {
-  padding: 0 7vw 110px;
-}
-
-.article-more > .eyebrow {
-  margin-bottom: 14px;
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: 90px var(--lado) 110px;
+  border-top: 1px solid var(--linha);
+  box-sizing: content-box;
 }
 
 .article-more h2 {
   margin-bottom: 34px;
-  font-size: clamp(30px, 3.4vw, 46px);
+  font-size: clamp(26px, 2.8vw, 38px);
 }
 
 .article-more .blog-grid {
-  padding: 0;
   max-width: none;
+  padding: 0;
 }
 
-/* ------------------------------- responsivo --------------------------------- */
+/* -------------------------------- responsivo --------------------------------- */
 
 @media (max-width: 1000px) {
-  .blog-grid article.destaque {
-    grid-template-columns: 1fr;
-  }
-
-  .blog-grid article.destaque > img {
-    aspect-ratio: 16 / 9;
-  }
-
-  .blog-grid article.destaque > div {
-    padding: 30px;
-  }
+  .blog-grid article.destaque { grid-template-columns: 1fr; }
+  .blog-grid article.destaque > img { aspect-ratio: 16 / 9; }
+  .blog-grid article.destaque > div { padding: 28px; }
 
   .article-content {
     display: block;
-    padding: 56px 7vw 90px;
+    padding: 56px var(--lado) 90px;
   }
 
-  .article-cover + .article-content {
-    padding-top: 48px;
-  }
-
+  .article-cover + .article-content { padding-top: 48px; }
   .article-content aside { display: none; }
-  .article-content .lead { font-size: 21px; }
+  .article-content .lead { font-size: 20px; }
   .article-content section { margin: 52px 0; }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 700px) {
   .blog-hero,
-  .article-hero { padding: 128px 7vw 64px; }
+  .article-hero { padding-top: 124px; padding-bottom: 60px; }
 
-  .blog-toolbar { padding: 40px 7vw 0; }
+  .blog-toolbar { padding-top: 36px; }
 
   .blog-grid {
     grid-template-columns: 1fr;
-    padding: 26px 7vw 80px;
+    padding-top: 24px;
+    padding-bottom: 80px;
   }
 
   .blog-grid article { min-height: 0; }
-  .blog-grid article > div { padding: 24px 24px 26px; }
+  .blog-grid article > div { padding: 22px 22px 24px; }
 
-  .article-cover {
-    margin-top: -32px;
-    padding: 0 7vw;
-  }
+  .article-cover { margin-top: -28px; }
+  .article-cover img { aspect-ratio: 3 / 2; border-radius: var(--r); }
 
-  .article-cover img {
-    aspect-ratio: 3 / 2;
-    border-radius: var(--r);
-  }
+  .article-content > div { font-size: 17px; }
 
-  .funnel-diagram div { font-size: 11px; padding: 0 14px; }
-  .funnel-diagram div:nth-child(2) { width: 86%; }
-  .funnel-diagram div:nth-child(3) { width: 72%; }
-  .funnel-diagram div:nth-child(4) { width: 58%; }
+  .funnel-diagram { padding: 14px; }
+  .funnel-diagram div { height: auto; min-height: 50px; padding: 8px 12px; font-size: 10.5px; flex-wrap: wrap; gap: 2px 10px; }
+  .funnel-diagram span { font-size: 9px; white-space: normal; }
+  .funnel-diagram div:nth-child(2) { width: 88%; }
+  .funnel-diagram div:nth-child(3) { width: 76%; }
+  .funnel-diagram div:nth-child(4) { width: 64%; }
 
-  .article-cta { padding: 30px; }
-  .article-more { padding: 0 7vw 80px; }
+  .article-cta { padding: 28px 24px; }
+  .article-cta .botao { width: 100%; justify-content: space-between; }
+
+  .article-more { padding-top: 64px; padding-bottom: 80px; }
 }

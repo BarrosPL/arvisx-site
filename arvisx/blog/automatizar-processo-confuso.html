@@ -22,39 +22,41 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/blog.css" />
+  <link rel="stylesheet" href="../css/style.css?v=20261019" />
+  <link rel="stylesheet" href="../css/blog.css?v=20261019" />
   <link rel="alternate" type="application/rss+xml" title="Blog ARVISX AI" href="feed.xml" />
 </head>
 <body>
   <a class="pular" href="#abertura">Pular para o conteúdo</a>
-  <div class="grain" aria-hidden="true"></div>
 
-  <nav class="nav" id="nav">
-    <a class="brand" href="../" aria-label="ARVISX AI, início">
+  <header class="topo" id="topo">
+    <a class="marca" href="../" aria-label="ARVISX AI, início">
       <img src="../img/arvisx-marca-branca.png" alt="ARVISX AI" width="168" height="23" />
     </a>
 
-    <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    <button class="menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="links">
+      <span></span><span></span>
+    </button>
 
-    <div class="nav-links" id="nav-links">
+    <nav class="links" id="links" aria-label="Principal">
       <a href="../#solucoes">Soluções</a>
       <a href="../#agentes">Agentes de IA</a>
       <a href="../#clientes">Ecossistema</a>
       <a href="../funil">Guia de Funil</a>
       <a href="./">Blog</a>
-      <a class="nav-cta nav-cta-mobile" href="../#contato">Diagnóstico estratégico <b>↗</b></a>
-    </div>
+      <a class="cta cta-menu" href="../#contato">Diagnóstico estratégico <b>↗</b></a>
+    </nav>
 
-    <a class="nav-cta" href="../#contato">Diagnóstico estratégico <b>↗</b></a>
-  </nav>
+    <a class="cta" href="../#contato">Diagnóstico estratégico <b>↗</b></a>
+    <span class="topo-progresso" aria-hidden="true"></span>
+  </header>
 
   <main class="article-page">
     <header class="article-hero" id="abertura">
       <a class="voltar" href="./">← VOLTAR AO BLOG</a>
-      <p class="eyebrow"><i></i> Automação · 23 jul 2026 · 3 min</p>
+      <p class="etiqueta" data-decifrar>Automação · 23 jul 2026 · 3 min</p>
       <h1>Automatizar processo confuso só acelera a confusão</h1>
       <p>A ordem que funciona é sempre a mesma: entender, desenhar, padronizar e só então automatizar.</p>
     </header>
@@ -101,7 +103,7 @@
 
         <div class="article-cta">
           <p>Quer transformar este assunto em resultado na sua operação?</p>
-          <a class="button primary" href="https://instagram.com/arvisxai" target="_blank" rel="noopener">Solicitar diagnóstico estratégico <span>↗</span></a>
+          <a class="botao primario" href="https://instagram.com/arvisxai" target="_blank" rel="noopener">Solicitar diagnóstico estratégico <span>↗</span></a>
         </div>
       </div>
     </div>
@@ -111,10 +113,10 @@
     Foto de <a href="https://commons.wikimedia.org/wiki/File:APMC_Linie_2.jpg" target="_blank" rel="noopener nofollow">Laempe</a> · CC BY-SA 3.0, via Wikimedia Commons.
   </div>
   <section class="article-more">
-    <p class="eyebrow purple"><i></i> CONTINUE LENDO</p>
+    <p class="etiqueta">CONTINUE LENDO</p>
     <h2>Outros conteúdos</h2>
     <div class="blog-grid">
-        <article data-categoria="Inteligência Artificial">
+        <article data-categoria="Inteligência Artificial" data-luz>
           <img src="../img/blog/lead-esfria-em-trinta-minutos.jpg" alt="Mãos digitando em um celular, iluminadas pela tela em um ambiente escuro" loading="lazy" />
           <div>
             <p>Inteligência Artificial</p>
@@ -123,7 +125,7 @@
             <a href="lead-esfria-em-trinta-minutos">Ler o artigo ↗</a>
           </div>
         </article>
-        <article data-categoria="CRM &amp; Funil">
+        <article data-categoria="CRM &amp; Funil" data-luz>
           <img src="../img/blog/crm-nao-e-agenda.jpg" alt="Sala de reunião informal com poltronas amarelas, sofá de couro e mesa de centro" loading="lazy" />
           <div>
             <p>CRM &amp; Funil</p>
@@ -137,7 +139,7 @@
   </main>
 
   <footer class="rodape">
-    <a class="brand compacta" href="../">
+    <a class="marca" href="../">
       <img src="../img/arvisx-marca-branca.png" alt="ARVISX AI" width="140" height="19" />
     </a>
     <p>O elo inteligente do seu ecossistema. © 2026</p>
@@ -149,8 +151,8 @@
     </nav>
   </footer>
 
-  <script src="../js/main.js" defer></script>
-  <script src="../js/blog.js" defer></script>
+  <script src="../js/main.js?v=20261019" defer></script>
+  <script src="../js/blog.js?v=20261019" defer></script>
 
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Automatizar processo confuso só acelera a confusão","description":"Automação não conserta processo mal definido — ela replica o erro mais rápido e em escala. Por onde começar.","datePublished":"2026-07-23","articleSection":"Automação","inLanguage":"pt-BR","image":"https://arvisx.com.br/img/blog/automatizar-processo-confuso.jpg","author":{"@type":"Organization","name":"ARVISX AI"},"publisher":{"@type":"Organization","name":"ARVISX AI"},"mainEntityOfPage":"https://arvisx.com.br/blog/automatizar-processo-confuso"}</script>
 </body>

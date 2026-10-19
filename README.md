@@ -17,9 +17,11 @@ arvisx/                    site estático — é isto que vai para o ar
   funil.html               Guia de Funil de Vendas
   css/style.css            identidade, componentes e a home
   css/blog.css             índice do blog, artigo e o guia
-  js/main.js               menu, navbar, revelar ao rolar, esteiras
+  js/main.js               menu, topo, etiquetas, revelar ao rolar, fio,
+                           quadro do fluxo, esteira
+  js/hero.js               a onda de dados da hero (só na home)
   js/blog.js               filtro de categorias e sumário do artigo
-  img/                     marca, arte da hero, ícones
+  img/                     marca, símbolo, ícones
   img/clientes/            logos do ecossistema
   img/blog/                capas dos posts (padrao.jpg é o fallback)
   blog/                    cópia estática do blog (gerada — não editar à mão)
@@ -82,6 +84,16 @@ Mexeu no CSS, no `render.js` ou no `seed/posts.json`? Rode
 `npm run render:site` para a cópia do repositório acompanhar. O servidor já
 regera sozinho a cada boot.
 
+Mexeu em qualquer arquivo de `css/` ou `js/`? Troque a versão `?v=AAAAMMDD`
+nos links: em `arvisx/index.html`, `arvisx/funil.html` e na constante
+`VERSAO` do `render.js` (depois, `npm run render:site`). O servidor manda o
+navegador guardar CSS e JS por um dia; sem trocar a versão, quem já visitou
+o site vê o HTML novo com o estilo antigo até o cache vencer.
+
+Para ver as animações numa máquina com "reduzir movimento" ligado (o site
+respeita essa preferência e fica parado), abra qualquer página com
+`?movimento` no fim do endereço.
+
 ---
 
 ## Como o blog funciona
@@ -137,15 +149,14 @@ parágrafos, `## ` vira subtítulo e `- ` vira item de lista.
 
 Tudo mora em `arvisx/img/`:
 
-- `hero-fundo.jpg` — a foto de fundo da hero. Para trocar, sobrescreva o
-  arquivo com algo em paisagem larga (o site usa 2400×1500) e escuro. O
-  contraste do texto não depende da foto: quem garante é o `.hero-veu`, um
-  degradê navy aplicado por cima no CSS. Crédito em
-  [img/CREDITOS.md](arvisx/img/CREDITOS.md).
-- `arvisx-marca-branca.png` — a marca na navbar e no rodapé.
-  `arvisx-marca-escura.png` é a mesma em versão chapada, para a faixa
-  dourada. `arvisx-logo.png` é o lockup completo, usado só nos dados
-  estruturados.
+- A hero não tem foto: a onda de dados é desenhada em canvas pelo
+  `js/hero.js`.
+- `arvisx-marca-branca.png` — a marca no topo, na faixa de prova e no
+  rodapé. `arvisx-marca-escura.png` é a mesma em versão chapada, para fundo
+  claro (sem uso no visual atual). `arvisx-logo.png` é o lockup completo,
+  usado só nos dados estruturados.
+- `arvisx-simbolo-branco.webp` — o símbolo no centro da órbita do
+  ecossistema.
 - `og-arvisx.jpg` — a imagem de compartilhamento das páginas sem capa
   própria.
 - `blog/*.jpg` — as capas dos posts, uma por slug, mais `padrao.jpg`.

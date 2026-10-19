@@ -22,38 +22,40 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/blog.css" />
+  <link rel="stylesheet" href="../css/style.css?v=20261019" />
+  <link rel="stylesheet" href="../css/blog.css?v=20261019" />
   <link rel="alternate" type="application/rss+xml" title="Blog ARVISX AI" href="feed.xml" />
 </head>
 <body>
   <a class="pular" href="#abertura">Pular para o conteúdo</a>
-  <div class="grain" aria-hidden="true"></div>
 
-  <nav class="nav" id="nav">
-    <a class="brand" href="../" aria-label="ARVISX AI, início">
+  <header class="topo" id="topo">
+    <a class="marca" href="../" aria-label="ARVISX AI, início">
       <img src="../img/arvisx-marca-branca.png" alt="ARVISX AI" width="168" height="23" />
     </a>
 
-    <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    <button class="menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="links">
+      <span></span><span></span>
+    </button>
 
-    <div class="nav-links" id="nav-links">
+    <nav class="links" id="links" aria-label="Principal">
       <a href="../#solucoes">Soluções</a>
       <a href="../#agentes">Agentes de IA</a>
       <a href="../#clientes">Ecossistema</a>
       <a href="../funil">Guia de Funil</a>
       <a href="./">Blog</a>
-      <a class="nav-cta nav-cta-mobile" href="../#contato">Diagnóstico estratégico <b>↗</b></a>
-    </div>
+      <a class="cta cta-menu" href="../#contato">Diagnóstico estratégico <b>↗</b></a>
+    </nav>
 
-    <a class="nav-cta" href="../#contato">Diagnóstico estratégico <b>↗</b></a>
-  </nav>
+    <a class="cta" href="../#contato">Diagnóstico estratégico <b>↗</b></a>
+    <span class="topo-progresso" aria-hidden="true"></span>
+  </header>
 
   <main class="blog-page">
     <header class="blog-hero" id="abertura">
-      <p class="eyebrow"><i></i> BLOG ARVISX AI</p>
+      <p class="etiqueta" data-decifrar>BLOG ARVISX AI</p>
       <h1>Inteligência que<br />vira <em>receita.</em></h1>
       <p>
         O que estamos aprendendo ao conectar IA, CRM, automação e tráfego em
@@ -74,7 +76,7 @@
     </div>
 
     <div class="blog-grid" data-posts>
-        <article class="destaque" data-categoria="Inteligência Artificial">
+        <article class="destaque" data-categoria="Inteligência Artificial" data-luz>
           <img src="../img/blog/lead-esfria-em-trinta-minutos.jpg" alt="Mãos digitando em um celular, iluminadas pela tela em um ambiente escuro" />
           <div>
             <p>DESTAQUE · Inteligência Artificial</p>
@@ -83,7 +85,7 @@
             <a href="lead-esfria-em-trinta-minutos">Ler o artigo ↗</a>
           </div>
         </article>
-        <article data-categoria="CRM &amp; Funil">
+        <article data-categoria="CRM &amp; Funil" data-luz>
           <img src="../img/blog/crm-nao-e-agenda.jpg" alt="Sala de reunião informal com poltronas amarelas, sofá de couro e mesa de centro" loading="lazy" />
           <div>
             <p>CRM &amp; Funil</p>
@@ -92,7 +94,7 @@
             <a href="crm-nao-e-agenda">Ler o artigo ↗</a>
           </div>
         </article>
-        <article data-categoria="Automação">
+        <article data-categoria="Automação" data-luz>
           <img src="../img/blog/automatizar-processo-confuso.jpg" alt="Linha de produção industrial com esteiras e estações de montagem enfileiradas" loading="lazy" />
           <div>
             <p>Automação</p>
@@ -101,7 +103,7 @@
             <a href="automatizar-processo-confuso">Ler o artigo ↗</a>
           </div>
         </article>
-        <article data-categoria="Tráfego &amp; Conteúdo">
+        <article data-categoria="Tráfego &amp; Conteúdo" data-luz>
           <img src="../img/blog/conteudo-que-baixa-o-custo-do-anuncio.jpg" alt="Painel publicitário iluminado em rua à noite, com fachada dourada ao fundo" loading="lazy" />
           <div>
             <p>Tráfego &amp; Conteúdo</p>
@@ -110,7 +112,7 @@
             <a href="conteudo-que-baixa-o-custo-do-anuncio">Ler o artigo ↗</a>
           </div>
         </article>
-        <article data-categoria="Gestão &amp; Dados">
+        <article data-categoria="Gestão &amp; Dados" data-luz>
           <img src="../img/blog/cinco-numeros-do-comercial.jpg" alt="Caderno aberto com anotações de métricas de campanha e um gráfico desenhado à mão" loading="lazy" />
           <div>
             <p>Gestão &amp; Dados</p>
@@ -119,7 +121,7 @@
             <a href="cinco-numeros-do-comercial">Ler o artigo ↗</a>
           </div>
         </article>
-        <article data-categoria="Inteligência Artificial">
+        <article data-categoria="Inteligência Artificial" data-luz>
           <img src="../img/blog/agente-de-ia-nao-e-chatbot.jpg" alt="Corredor de um data center com fileiras de servidores iluminados em azul" loading="lazy" />
           <div>
             <p>Inteligência Artificial</p>
@@ -133,7 +135,7 @@
   </main>
 
   <footer class="rodape">
-    <a class="brand compacta" href="../">
+    <a class="marca" href="../">
       <img src="../img/arvisx-marca-branca.png" alt="ARVISX AI" width="140" height="19" />
     </a>
     <p>O elo inteligente do seu ecossistema. © 2026</p>
@@ -145,7 +147,7 @@
     </nav>
   </footer>
 
-  <script src="../js/main.js" defer></script>
-  <script src="../js/blog.js" defer></script>
+  <script src="../js/main.js?v=20261019" defer></script>
+  <script src="../js/blog.js?v=20261019" defer></script>
 </body>
 </html>
