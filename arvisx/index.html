@@ -7,13 +7,13 @@
   <title>ARVISX AI | Inteligência, automação e crescimento comercial</title>
   <meta name="description" content="A ARVISX AI conecta marketing, IA, CRM, automação, SDR e dados para criar operações comerciais que crescem com previsibilidade." />
   <meta name="keywords" content="automação comercial, inteligência artificial, CRM Kommo, funil de vendas, SDR, tráfego pago, gestão de redes sociais, marketing digital" />
-  <link rel="canonical" href="https://arvisx.ai/" />
+  <link rel="canonical" href="https://arvisx.com.br/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:title" content="ARVISX AI | O elo inteligente do seu ecossistema" />
   <meta property="og:description" content="Marketing, IA, CRM e vendas operando como um único sistema." />
-  <meta property="og:image" content="https://arvisx.ai/img/og-arvisx.jpg" />
+  <meta property="og:image" content="https://arvisx.com.br/img/og-arvisx.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ARVISX AI | O elo inteligente do seu ecossistema" />
   <meta name="twitter:description" content="Marketing, IA, CRM e vendas operando como um único sistema." />
@@ -24,62 +24,65 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=20261019" />
   <link rel="alternate" type="application/rss+xml" title="Blog ARVISX AI" href="blog/feed.xml" />
 </head>
 <body>
   <a class="pular" href="#inicio">Pular para o conteúdo</a>
-  <div class="grain" aria-hidden="true"></div>
 
-  <nav class="nav" id="nav">
-    <a class="brand" href="#inicio" aria-label="ARVISX AI, início">
+  <!-- ------------------------------- topo -------------------------------- -->
+  <header class="topo" id="topo">
+    <a class="marca" href="#inicio" aria-label="ARVISX AI, início">
       <img src="img/arvisx-marca-branca.png" alt="ARVISX AI" width="168" height="23" />
     </a>
 
-    <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    <button class="menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="links">
+      <span></span><span></span>
+    </button>
 
-    <div class="nav-links" id="nav-links">
+    <nav class="links" id="links" aria-label="Principal">
       <a href="#solucoes">Soluções</a>
       <a href="#agentes">Agentes de IA</a>
       <a href="#clientes">Ecossistema</a>
       <a href="funil">Guia de Funil</a>
       <a href="blog/">Blog</a>
-      <a class="nav-cta nav-cta-mobile" href="#contato">Diagnóstico estratégico <b>↗</b></a>
-    </div>
+      <a class="cta cta-menu" href="#contato">Diagnóstico estratégico <b>↗</b></a>
+    </nav>
 
-    <a class="nav-cta" href="#contato">Diagnóstico estratégico <b>↗</b></a>
-  </nav>
+    <a class="cta" href="#contato">Diagnóstico estratégico <b>↗</b></a>
+    <span class="topo-progresso" aria-hidden="true"></span>
+  </header>
 
   <main>
-    <!-- ------------------------------- hero ------------------------------- -->
+    <!-- ------------------------------- hero -------------------------------
+         O canvas desenha a onda de dados (hero.js) na coluna da direita. O
+         .nucleo só reserva e marca essa área; quem desenha é o JS. -->
     <section class="hero" id="inicio">
-      <!-- Foto de fundo. O véu e os brilhos por cima é que garantem a
-           leitura do texto — trocar a foto não quebra o contraste. -->
-      <img class="hero-fundo" src="img/hero-fundo.jpg" alt="" width="2400" height="1500" fetchpriority="high" />
-      <div class="hero-veu" aria-hidden="true"></div>
-      <div class="hero-glow glow-one" aria-hidden="true"></div>
-      <div class="hero-glow glow-two" aria-hidden="true"></div>
+      <canvas class="hero-campo" aria-hidden="true"></canvas>
+      <div class="hero-grade" aria-hidden="true"></div>
 
-      <div class="hero-copy">
-        <p class="eyebrow"><i></i> O ELO INTELIGENTE DO SEU ECOSSISTEMA</p>
-        <h1>Marketing atrai.<br />A <strong>ARVISX</strong> faz converter.</h1>
-        <p class="hero-text">
-          Arquitetamos operações comerciais de alta performance com inteligência
-          artificial, CRM, automação, tráfego e conteúdo — todos trabalhando
-          como um só sistema.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#contato">Construir minha máquina de vendas <span>↗</span></a>
-          <a class="button ghost" href="funil">Entender o funil de vendas <span>↓</span></a>
+      <div class="hero-corpo">
+        <div class="hero-texto">
+          <p class="etiqueta" data-decifrar>O ELO INTELIGENTE DO SEU ECOSSISTEMA</p>
+          <h1><span class="oco">Marketing atrai.</span><br />A <strong>ARVISX</strong> <span class="junto">faz converter.</span></h1>
+          <p class="hero-sub">
+            Arquitetamos operações comerciais de alta performance com inteligência
+            artificial, CRM, automação, tráfego e conteúdo — todos trabalhando
+            como um só sistema.
+          </p>
+          <div class="acoes">
+            <a class="botao primario" href="#contato">Construir minha máquina de vendas <span>↗</span></a>
+            <a class="botao fantasma" href="funil">Entender o funil de vendas <span>↓</span></a>
+          </div>
+          <p class="hero-nota">IA · CRM · SDR · ADS · DADOS — EM UMA ÚNICA OPERAÇÃO</p>
         </div>
-        <p class="hero-nota">IA · CRM · SDR · ADS · DADOS — EM UMA ÚNICA OPERAÇÃO</p>
+
+        <div class="nucleo" data-nucleo aria-hidden="true"></div>
       </div>
 
-      <!-- Marcas do ecossistema. O main.js clona a lista com aria-hidden para
-           a esteira emendar sem salto; sem JS ela fica parada e legível. -->
-      <div class="hero-marcas">
+      <div class="marcas">
         <p>Marcas e operações que já rodam com a ARVISX</p>
         <div class="esteira" data-esteira>
           <ul>
@@ -95,118 +98,159 @@
       </div>
     </section>
 
-    <!-- ------------------------------ prova -------------------------------
-         A faixa navy abaixo é a continuação da hero para depois da dobra:
-         é sobre ela que a faixa dourada sobe, mantendo o efeito de cartão
-         sobreposto sem aparecer na primeira tela. -->
-    <div class="hero-base" aria-hidden="true"></div>
+    <!-- O fio: uma linha na margem esquerda que liga as seções e se acende
+         conforme a rolagem. A página inteira é o caminho do lead. -->
+    <svg class="fio" aria-hidden="true"></svg>
 
-    <section class="proof">
-      <span class="brand compacta">
-        <img src="img/arvisx-marca-escura.png" alt="ARVISX AI" width="150" height="21" />
-      </span>
+    <!-- ------------------------------ prova ------------------------------- -->
+    <section class="prova revelar">
+      <img class="prova-marca" src="img/arvisx-marca-branca.png" alt="ARVISX AI" width="150" height="21" />
       <p>Não entregamos ferramentas soltas. <strong>Construímos sistemas que vendem.</strong></p>
-      <div class="proof-line" aria-hidden="true"></div>
-      <div class="kommo">
-       <a href="https://www.kommo.com/br/">
-        <img src="img/Badge light.svg" alt="badge parceiro kommo" width="120" height="40" />
-       </a>
-      </div>
-
+      <span class="prova-linha" aria-hidden="true"></span>
+      <a class="kommo" href="https://www.kommo.com/br/">
+        <img src="img/Badge dark.svg" alt="badge parceiro kommo" width="120" height="45" />
+      </a>
     </section>
 
     <!-- ----------------------------- soluções ------------------------------ -->
-    <section class="intro section" id="solucoes">
-      <p class="eyebrow purple revelar"><i></i> O QUE A ARVISX CONSTRÓI</p>
-
-      <div class="intro-grid revelar">
-        <h2>Mais inteligência<br />em cada <em>conversa.</em></h2>
-        <p>
+    <section class="secao" id="solucoes">
+      <div class="cabeca">
+        <p class="etiqueta" data-decifrar>O QUE A ARVISX CONSTRÓI</p>
+        <h2 class="revelar">Mais inteligência<br />em cada <em>conversa.</em></h2>
+        <p class="cabeca-texto revelar">
           Não existe crescimento sustentável quando marketing, atendimento e
           vendas trabalham separados. A ARVISX conecta atenção, dados e execução
           para nenhum lead ficar sem resposta, proposta ou acompanhamento.
         </p>
       </div>
 
-      <div class="services-grid">
-        <article class="service revelar">
-          <span>01</span>
-          <div class="service-icon" aria-hidden="true">✦</div>
+      <div class="servicos">
+        <article class="servico revelar" data-luz>
+          <div class="servico-topo">
+            <span>01</span>
+            <a href="#contato" aria-label="Saber mais sobre Arquitetura de IA">↗</a>
+          </div>
+          <svg class="icone ic-ia" viewBox="0 0 48 48" aria-hidden="true">
+            <path class="ic-traco" d="M12 12 24 24M36 12 24 24M12 36 24 24M36 36 24 24M12 12h24M12 36h24" />
+            <circle class="ic-no" cx="12" cy="12" r="3.2" />
+            <circle class="ic-no" cx="36" cy="12" r="3.2" />
+            <circle class="ic-no" cx="12" cy="36" r="3.2" />
+            <circle class="ic-no" cx="36" cy="36" r="3.2" />
+            <circle class="ic-centro" cx="24" cy="24" r="5" />
+          </svg>
           <h3>Arquitetura de IA</h3>
           <p>Agentes que atendem, qualificam, distribuem e acompanham oportunidades 24 horas por dia.</p>
-          <a href="#contato" aria-label="Saber mais sobre Arquitetura de IA">↗</a>
         </article>
 
-        <article class="service revelar">
-          <span>02</span>
-          <div class="service-icon" aria-hidden="true">✦</div>
+        <article class="servico revelar" data-luz>
+          <div class="servico-topo">
+            <span>02</span>
+            <a href="#contato" aria-label="Saber mais sobre CRM e Funil Comercial">↗</a>
+          </div>
+          <svg class="icone ic-funil" viewBox="0 0 48 48" aria-hidden="true">
+            <rect class="ic-barra" x="6" y="9" width="36" height="7" rx="2" />
+            <rect class="ic-barra" x="12" y="20.5" width="24" height="7" rx="2" />
+            <rect class="ic-barra" x="18" y="32" width="12" height="7" rx="2" />
+          </svg>
           <h3>CRM &amp; Funil Comercial</h3>
           <p>O caminho completo do lead até a assinatura, com visibilidade para escalar sem perder controle.</p>
-          <a href="#contato" aria-label="Saber mais sobre CRM e Funil Comercial">↗</a>
         </article>
 
-        <article class="service revelar">
-          <span>03</span>
-          <div class="service-icon" aria-hidden="true">✦</div>
+        <article class="servico revelar" data-luz>
+          <div class="servico-topo">
+            <span>03</span>
+            <a href="#contato" aria-label="Saber mais sobre SDR e Agendamento">↗</a>
+          </div>
+          <svg class="icone ic-agenda" viewBox="0 0 48 48" aria-hidden="true">
+            <circle class="ic-traco" cx="24" cy="25" r="16" />
+            <path class="ic-traco" d="M24 4v4M16 4.5l1.5 3.5M32 4.5 30.5 8" />
+            <path class="ic-ponteiro" d="M24 25V15" />
+            <path class="ic-ponteiro-curto" d="M24 25h7" />
+            <circle class="ic-centro" cx="24" cy="25" r="2.4" />
+          </svg>
           <h3>SDR &amp; Agendamento</h3>
           <p>Prospecção, cadência e agendas organizadas para o seu time conversar com a pessoa certa, na hora certa.</p>
-          <a href="#contato" aria-label="Saber mais sobre SDR e Agendamento">↗</a>
         </article>
 
-        <article class="service revelar">
-          <span>04</span>
-          <div class="service-icon" aria-hidden="true">✦</div>
+        <article class="servico revelar" data-luz>
+          <div class="servico-topo">
+            <span>04</span>
+            <a href="#contato" aria-label="Saber mais sobre Automação de Processos">↗</a>
+          </div>
+          <svg class="icone ic-auto" viewBox="0 0 48 48" aria-hidden="true">
+            <g class="ic-giro">
+              <path class="ic-traco" d="M38 20a15 15 0 0 0-27.4-5.6M10 28a15 15 0 0 0 27.4 5.6" />
+              <path class="ic-traco" d="M10 8v7h7M38 40v-7h-7" />
+            </g>
+            <circle class="ic-centro" cx="24" cy="24" r="4" />
+          </svg>
           <h3>Automação de Processos</h3>
           <p>Propostas, follow-up, pós-venda e tarefas operacionais executados com consistência.</p>
-          <a href="#contato" aria-label="Saber mais sobre Automação de Processos">↗</a>
         </article>
 
-        <article class="service revelar">
-          <span>05</span>
-          <div class="service-icon" aria-hidden="true">✦</div>
+        <article class="servico revelar" data-luz>
+          <div class="servico-topo">
+            <span>05</span>
+            <a href="#contato" aria-label="Saber mais sobre Tráfego, Conteúdo e Social">↗</a>
+          </div>
+          <svg class="icone ic-sinal" viewBox="0 0 48 48" aria-hidden="true">
+            <path class="ic-onda o1" d="M17 17a10 10 0 0 0 0 14M31 17a10 10 0 0 1 0 14" />
+            <path class="ic-onda o2" d="M11 11a18.5 18.5 0 0 0 0 26M37 11a18.5 18.5 0 0 1 0 26" />
+            <path class="ic-onda o3" d="M5 5a27 27 0 0 0 0 38M43 5a27 27 0 0 1 0 38" />
+            <circle class="ic-centro" cx="24" cy="24" r="4" />
+          </svg>
           <h3>Tráfego, Conteúdo &amp; Social</h3>
           <p>Criativos, anúncios, blogs e redes sociais que alimentam o funil — não apenas alcance.</p>
-          <a href="#contato" aria-label="Saber mais sobre Tráfego, Conteúdo e Social">↗</a>
         </article>
 
-        <article class="service revelar">
-          <span>06</span>
-          <div class="service-icon" aria-hidden="true">✦</div>
+        <article class="servico revelar" data-luz>
+          <div class="servico-topo">
+            <span>06</span>
+            <a href="#contato" aria-label="Saber mais sobre Dados e Escala">↗</a>
+          </div>
+          <svg class="icone ic-dados" viewBox="0 0 48 48" aria-hidden="true">
+            <path class="ic-traco" d="M5 42h38" />
+            <rect class="ic-coluna c1" x="8" y="30" width="6" height="12" rx="1.5" />
+            <rect class="ic-coluna c2" x="17" y="23" width="6" height="19" rx="1.5" />
+            <rect class="ic-coluna c3" x="26" y="16" width="6" height="26" rx="1.5" />
+            <rect class="ic-coluna c4" x="35" y="7" width="6" height="35" rx="1.5" />
+          </svg>
           <h3>Dados &amp; Escala</h3>
           <p>Indicadores e testes contínuos para transformar investimento em aquisição previsível.</p>
-          <a href="#contato" aria-label="Saber mais sobre Dados e Escala">↗</a>
         </article>
       </div>
     </section>
 
-    <!-- --------------------------- fluxo / sistema -------------------------- -->
-    <section class="system" id="ecossistema">
-      <div class="system-bg" aria-hidden="true"></div>
-
-      <div class="system-copy revelar">
-        <p class="eyebrow"><i></i> UM ÚNICO ECOSSISTEMA</p>
-        <h2>Do primeiro<br />clique ao <em>sim.</em></h2>
-        <p>
+    <!-- --------------------------- fluxo / sistema -------------------------
+         O quadro é uma esteira viva: fichas descem pelas etapas e acendem
+         cada uma. A ficha chega azul (canal) e vira dourada na etapa da IA. -->
+    <section class="secao sistema" id="ecossistema">
+      <div class="sistema-texto">
+        <p class="etiqueta" data-decifrar>UM ÚNICO ECOSSISTEMA</p>
+        <h2 class="revelar">Do primeiro<br />clique ao <em>sim.</em></h2>
+        <p class="revelar">
           Conectamos canais, dados e pessoas para que cada oportunidade avance
           com velocidade, contexto e consistência.
         </p>
-        <a class="button primary" href="#contato">Quero estruturar minha operação <span>↗</span></a>
+        <a class="botao primario revelar" href="#contato">Quero estruturar minha operação <span>↗</span></a>
       </div>
 
-      <div class="pipeline revelar" data-pipeline>
-        <div class="pipeline-head">
+      <div class="fluxo revelar" data-fluxo>
+        <div class="fluxo-topo">
           <span>ARVISX FLOW / 01</span>
           <b>OPERAÇÃO ATIVA <i aria-hidden="true"></i></b>
         </div>
 
-        <div class="pipe-row"><span>01</span><b>Anúncio, Conteúdo &amp; SEO</b><i>→</i></div>
-        <div class="pipe-row"><span>02</span><b>WhatsApp &amp; Instagram</b><i>→</i></div>
-        <div class="pipe-row"><span>03</span><b>IA de Qualificação</b><i>IA</i></div>
-        <div class="pipe-row"><span>04</span><b>CRM Kommo</b><i>K</i></div>
-        <div class="pipe-row"><span>05</span><b>SDR &amp; Agendamento</b><i>→</i></div>
-        <div class="pipe-row"><span>06</span><b>Proposta &amp; Follow-up</b><i>→</i></div>
+        <div class="fluxo-trilho">
+          <div class="etapa entrada"><span>01</span><b>Anúncio, Conteúdo &amp; SEO</b><i>→</i></div>
+          <div class="etapa entrada"><span>02</span><b>WhatsApp &amp; Instagram</b><i>→</i></div>
+          <div class="etapa"><span>03</span><b>IA de Qualificação</b><i>IA</i></div>
+          <div class="etapa"><span>04</span><b>CRM Kommo</b><i>K</i></div>
+          <div class="etapa"><span>05</span><b>SDR &amp; Agendamento</b><i>→</i></div>
+          <div class="etapa"><span>06</span><b>Proposta &amp; Follow-up</b><i>→</i></div>
+        </div>
 
-        <div class="pipeline-bottom">
+        <div class="fluxo-pe">
           <span>LEADS EM MOVIMENTO</span>
           <b>● ONLINE</b>
         </div>
@@ -214,188 +258,233 @@
     </section>
 
     <!-- ------------------------------ agentes ------------------------------- -->
-    <section class="agents section" id="agentes">
-      <p class="eyebrow purple revelar"><i></i> AGENTES DE INTELIGÊNCIA ARTIFICIAL</p>
-
-      <div class="intro-grid revelar">
-        <h2>Uma operação que<br /><em>não deixa escapar.</em></h2>
-        <p>
+    <section class="secao" id="agentes">
+      <div class="cabeca">
+        <p class="etiqueta" data-decifrar>AGENTES DE INTELIGÊNCIA ARTIFICIAL</p>
+        <h2 class="revelar">Uma operação que<br /><em>não deixa escapar.</em></h2>
+        <p class="cabeca-texto revelar">
           Não é só um chatbot. A ARVISX implementa agentes especializados que
           executam as etapas reais do seu comercial e sustentam a operação do
           escritório ou empresa de ponta a ponta.
         </p>
       </div>
 
-      <!-- Cada agente tem o ícone da etapa que ele executa, com o ponto de
-           conexão no canto marcando que é um agente e não um recurso solto. -->
-      <div class="agents-grid">
-        <article class="revelar">
-          <span>01</span>
-          <div class="agent-dot" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.6 9.6 0 0 1-2.9-.4L3 21l1.6-4.6A8.2 8.2 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z" />
-              <path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01" />
-            </svg>
+      <!-- O rótulo de cada agente acende em sequência — canal, CRM, próxima
+           ação — como o caminho que o agente percorre. -->
+      <div class="agentes" data-agentes>
+        <article class="agente revelar">
+          <div class="agente-topo">
+            <div class="agente-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.6 9.6 0 0 1-2.9-.4L3 21l1.6-4.6A8.2 8.2 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z" />
+                <path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01" />
+              </svg>
+            </div>
+            <span>01</span>
           </div>
           <h3>Agente de primeiro atendimento</h3>
           <p>Responde WhatsApp, Instagram e landing pages em segundos, entende a intenção e coleta os dados certos.</p>
-          <small>CANAL → CRM → PRÓXIMA AÇÃO</small>
+          <small class="rota"><span>CANAL</span> → <span>CRM</span> → <span>PRÓXIMA AÇÃO</span></small>
         </article>
 
-        <article class="revelar">
-          <span>02</span>
-          <div class="agent-dot" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 4.5h18l-7 8.2V20l-4 1.5v-8.8z" />
-            </svg>
+        <article class="agente revelar">
+          <div class="agente-topo">
+            <div class="agente-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 4.5h18l-7 8.2V20l-4 1.5v-8.8z" />
+              </svg>
+            </div>
+            <span>02</span>
           </div>
           <h3>Agente de qualificação</h3>
           <p>Aplica os critérios da empresa, identifica urgência e encaminha cada oportunidade para a jornada correta.</p>
-          <small>CANAL → CRM → PRÓXIMA AÇÃO</small>
+          <small class="rota"><span>CANAL</span> → <span>CRM</span> → <span>PRÓXIMA AÇÃO</span></small>
         </article>
 
-        <article class="revelar">
-          <span>03</span>
-          <div class="agent-dot" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="5" width="18" height="16" rx="3" />
-              <path d="M3 10h18M8 3v4M16 3v4" />
-              <path d="m9 15 2 2 4-4" />
-            </svg>
+        <article class="agente revelar">
+          <div class="agente-topo">
+            <div class="agente-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="16" rx="3" />
+                <path d="M3 10h18M8 3v4M16 3v4" />
+                <path d="m9 15 2 2 4-4" />
+              </svg>
+            </div>
+            <span>03</span>
           </div>
           <h3>Agente de agendamento</h3>
           <p>Consulta disponibilidade, confirma presença, reduz faltas e entrega ao consultor uma conversa contextualizada.</p>
-          <small>CANAL → CRM → PRÓXIMA AÇÃO</small>
+          <small class="rota"><span>CANAL</span> → <span>CRM</span> → <span>PRÓXIMA AÇÃO</span></small>
         </article>
 
-        <article class="revelar">
-          <span>04</span>
-          <div class="agent-dot" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2.5H7a2.5 2.5 0 0 0-2.5 2.5v14A2.5 2.5 0 0 0 7 21.5h10a2.5 2.5 0 0 0 2.5-2.5V8z" />
-              <path d="M14 2.5V8h5.5M8.5 13h7M8.5 17h4.5" />
-            </svg>
+        <article class="agente revelar">
+          <div class="agente-topo">
+            <div class="agente-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2.5H7a2.5 2.5 0 0 0-2.5 2.5v14A2.5 2.5 0 0 0 7 21.5h10a2.5 2.5 0 0 0 2.5-2.5V8z" />
+                <path d="M14 2.5V8h5.5M8.5 13h7M8.5 17h4.5" />
+              </svg>
+            </div>
+            <span>04</span>
           </div>
           <h3>Agente de proposta</h3>
           <p>Aciona a proposta adequada, organiza aprovações e mantém follow-ups ativos sem deixar negociações esfriarem.</p>
-          <small>CANAL → CRM → PRÓXIMA AÇÃO</small>
+          <small class="rota"><span>CANAL</span> → <span>CRM</span> → <span>PRÓXIMA AÇÃO</span></small>
         </article>
 
-        <article class="revelar">
-          <span>05</span>
-          <div class="agent-dot" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2.5" y="5" width="19" height="14" rx="3" />
-              <path d="M2.5 10h19M6.5 15h3" />
-            </svg>
+        <article class="agente revelar">
+          <div class="agente-topo">
+            <div class="agente-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2.5" y="5" width="19" height="14" rx="3" />
+                <path d="M2.5 10h19M6.5 15h3" />
+              </svg>
+            </div>
+            <span>05</span>
           </div>
           <h3>Agente de pagamento</h3>
           <p>Lembra vencimentos, direciona links de pagamento e sinaliza pendências para o time financeiro.</p>
-          <small>CANAL → CRM → PRÓXIMA AÇÃO</small>
+          <small class="rota"><span>CANAL</span> → <span>CRM</span> → <span>PRÓXIMA AÇÃO</span></small>
         </article>
 
-        <article class="revelar">
-          <span>06</span>
-          <div class="agent-dot" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3.5 20.5h17" />
-              <path d="M6.5 20.5v-6M11 20.5V8M15.5 20.5v-8M20 20.5V4" />
-            </svg>
+        <article class="agente revelar">
+          <div class="agente-topo">
+            <div class="agente-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3.5 20.5h17" />
+                <path d="M6.5 20.5v-6M11 20.5V8M15.5 20.5v-8M20 20.5V4" />
+              </svg>
+            </div>
+            <span>06</span>
           </div>
           <h3>Agente de CRM &amp; gestão</h3>
           <p>Atualiza o Kommo, distribui tarefas, acompanha etapas e transforma o processo comercial em dados de gestão.</p>
-          <small>CANAL → CRM → PRÓXIMA AÇÃO</small>
+          <small class="rota"><span>CANAL</span> → <span>CRM</span> → <span>PRÓXIMA AÇÃO</span></small>
         </article>
       </div>
     </section>
 
-    <!-- ---------------------------- ecossistema ----------------------------- -->
-    <section class="clients section" id="clientes">
-      <p class="eyebrow purple revelar"><i></i> ECOSSISTEMA QUE ACELERAMOS</p>
-
-      <div class="clients-header revelar">
-        <h2>Projetos que já<br />nascem para <em>crescer.</em></h2>
-        <p>
+    <!-- ---------------------------- ecossistema -----------------------------
+         As marcas orbitam a ARVISX e recebem pulsos pelos raios. No celular
+         a órbita vira grade, com o mesmo conteúdo. -->
+    <section class="secao clientes" id="clientes">
+      <div class="cabeca cabeca-coluna">
+        <p class="etiqueta" data-decifrar>ECOSSISTEMA QUE ACELERAMOS</p>
+        <h2 class="revelar">Projetos que já<br />nascem para <em>crescer.</em></h2>
+        <p class="cabeca-texto revelar">
           Marcas e operações do nosso ecossistema que usam estratégia,
           criatividade e tecnologia para ganhar clareza e velocidade.
         </p>
       </div>
 
-      <div class="clients-grid">
-        <div class="client-card revelar">
-          <span>01</span>
-          <img src="img/clientes/voce-na-europa.png" alt="Logo Você na Europa" />
-          <small>IMIGRAÇÃO &amp; NACIONALIDADE</small>
+      <div class="orbita revelar">
+        <div class="orbita-anel a1" aria-hidden="true"></div>
+        <div class="orbita-anel a2" aria-hidden="true"></div>
+        <div class="orbita-centro" aria-hidden="true">
+          <img src="img/arvisx-simbolo-branco.webp" alt="" width="520" height="358" />
         </div>
 
-        <div class="client-card revelar">
-          <span>02</span>
-          <img src="img/clientes/vem-de-visto.png" alt="Logo Vem de Visto" />
-          <small>VISTOS &amp; DIPLOMAS</small>
-        </div>
-
-        <div class="client-card revelar">
-          <span>03</span>
-          <img src="img/clientes/perrotti.png" alt="Logo Perrotti Sociedade de Advogados" />
-          <small>JURÍDICO INTERNACIONAL</small>
-        </div>
-
-        <div class="client-card revelar">
-          <span>04</span>
-          <img src="img/clientes/nesso-viaggi.png" alt="Logo Nesso Viaggi" />
-          <small>VIAGENS &amp; EXPERIÊNCIAS</small>
-        </div>
-
-        <div class="client-card revelar">
-          <span>05</span>
-          <img src="img/clientes/renan-perrotti.png" alt="Logo Renan Perrotti" />
-          <small>MARCA PESSOAL &amp; EDUCAÇÃO</small>
-        </div>
-
-        <div class="client-card revelar">
-          <span>06</span>
-          <img src="img/clientes/daiana-perrotti.png" alt="Logo Daiana Perrotti" />
-          <small>MENTORIA &amp; ADVOCACIA</small>
-        </div>
-
-        <div class="client-card revelar">
-          <span>07</span>
-          <img src="img/clientes/alvance.png" alt="Logo Alvance Consórcio e Seguros" />
-          <small>PROTEÇÃO &amp; PATRIMÔNIO</small>
+        <div class="orbita-giro">
+          <div class="no" style="--a: -90deg; --i: 0">
+            <i class="raio" aria-hidden="true"></i>
+            <div class="no-pos">
+              <div class="no-cartao">
+                <span>01</span>
+                <img src="img/clientes/voce-na-europa.png" alt="Logo Você na Europa" />
+                <small>IMIGRAÇÃO &amp; NACIONALIDADE</small>
+              </div>
+            </div>
+          </div>
+          <div class="no" style="--a: -38.57deg; --i: 1">
+            <i class="raio" aria-hidden="true"></i>
+            <div class="no-pos">
+              <div class="no-cartao">
+                <span>02</span>
+                <img src="img/clientes/vem-de-visto.png" alt="Logo Vem de Visto" />
+                <small>VISTOS &amp; DIPLOMAS</small>
+              </div>
+            </div>
+          </div>
+          <div class="no" style="--a: 12.86deg; --i: 2">
+            <i class="raio" aria-hidden="true"></i>
+            <div class="no-pos">
+              <div class="no-cartao">
+                <span>03</span>
+                <img src="img/clientes/perrotti.png" alt="Logo Perrotti Sociedade de Advogados" />
+                <small>JURÍDICO INTERNACIONAL</small>
+              </div>
+            </div>
+          </div>
+          <div class="no" style="--a: 64.29deg; --i: 3">
+            <i class="raio" aria-hidden="true"></i>
+            <div class="no-pos">
+              <div class="no-cartao">
+                <span>04</span>
+                <img src="img/clientes/nesso-viaggi.png" alt="Logo Nesso Viaggi" />
+                <small>VIAGENS &amp; EXPERIÊNCIAS</small>
+              </div>
+            </div>
+          </div>
+          <div class="no" style="--a: 115.71deg; --i: 4">
+            <i class="raio" aria-hidden="true"></i>
+            <div class="no-pos">
+              <div class="no-cartao">
+                <span>05</span>
+                <img src="img/clientes/renan-perrotti.png" alt="Logo Renan Perrotti" />
+                <small>MARCA PESSOAL &amp; EDUCAÇÃO</small>
+              </div>
+            </div>
+          </div>
+          <div class="no" style="--a: 167.14deg; --i: 5">
+            <i class="raio" aria-hidden="true"></i>
+            <div class="no-pos">
+              <div class="no-cartao">
+                <span>06</span>
+                <img src="img/clientes/daiana-perrotti.png" alt="Logo Daiana Perrotti" />
+                <small>MENTORIA &amp; ADVOCACIA</small>
+              </div>
+            </div>
+          </div>
+          <div class="no" style="--a: 218.57deg; --i: 6">
+            <i class="raio" aria-hidden="true"></i>
+            <div class="no-pos">
+              <div class="no-cartao">
+                <span>07</span>
+                <img src="img/clientes/alvance.png" alt="Logo Alvance Consórcio e Seguros" />
+                <small>PROTEÇÃO &amp; PATRIMÔNIO</small>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ------------------------------- método -------------------------------- -->
-    <section class="method section" id="metodo">
-      <p class="eyebrow purple revelar"><i></i> COMO FAZEMOS</p>
-      <h2 class="revelar">Estratégia antes de tecnologia.<br /><em>Resultado desde o início.</em></h2>
+    <section class="secao metodo" id="metodo">
+      <div class="cabeca">
+        <p class="etiqueta" data-decifrar>COMO FAZEMOS</p>
+        <h2 class="revelar">Estratégia antes de tecnologia.<br /><em>Resultado desde o início.</em></h2>
+      </div>
 
-      <div class="steps">
-        <article class="revelar">
+      <div class="passos" data-passos>
+        <span class="passos-trilho" aria-hidden="true"><i></i></span>
+        <article class="passo">
           <span>01</span>
-          <div aria-hidden="true"></div>
           <h3>Diagnóstico</h3>
           <p>Mapeamos gargalos, oferta, canais e o percurso comercial atual.</p>
         </article>
-
-        <article class="revelar">
+        <article class="passo">
           <span>02</span>
-          <div aria-hidden="true"></div>
           <h3>Desenho</h3>
           <p>Definimos jornadas, mensagens, automações e indicadores.</p>
         </article>
-
-        <article class="revelar">
+        <article class="passo">
           <span>03</span>
-          <div aria-hidden="true"></div>
           <h3>Implementação</h3>
           <p>Conectamos CRM, WhatsApp, Instagram e o seu ecossistema.</p>
         </article>
-
-        <article class="revelar">
+        <article class="passo">
           <span>04</span>
-          <div aria-hidden="true"></div>
           <h3>Escala</h3>
           <p>Otimização com dados, testes e acompanhamento estratégico.</p>
         </article>
@@ -403,44 +492,66 @@
     </section>
 
     <!-- ---------------------------- conhecimento ----------------------------- -->
-    <section class="knowledge revelar">
-      <div>
-        <p class="eyebrow"><i></i> CONHECIMENTO QUE GERA DEMANDA</p>
+    <section class="saber revelar">
+      <div class="saber-texto">
+        <p class="etiqueta" data-decifrar>CONHECIMENTO QUE GERA DEMANDA</p>
         <h2>O seu marketing precisa de uma <em>rota.</em></h2>
         <p>Descubra como marketing, conteúdo, tráfego e funil se unem para gerar vendas com previsibilidade.</p>
+        <a class="botao primario" href="funil">Ler o Guia de Funil de Vendas <span>↗</span></a>
       </div>
-      <a class="button primary" href="funil">Ler o Guia de Funil de Vendas <span>↗</span></a>
+
+      <!-- A rota: um caminho com quatro paradas e um ponto dourado que o
+           percorre. Animação em SMIL; o JS pausa se o movimento for reduzido. -->
+      <svg class="rota-mapa" viewBox="0 0 420 300" aria-hidden="true">
+        <path id="rota-caminho" class="rota-base" d="M30 262C92 262 84 196 146 190S214 236 256 168 254 74 312 70 356 40 392 34" />
+        <path class="rota-ouro" d="M30 262C92 262 84 196 146 190S214 236 256 168 254 74 312 70 356 40 392 34" />
+        <circle class="rota-parada" cx="30" cy="262" r="5" />
+        <circle class="rota-parada" cx="146" cy="190" r="5" />
+        <circle class="rota-parada" cx="256" cy="168" r="5" />
+        <circle class="rota-parada" cx="312" cy="70" r="5" />
+        <circle class="rota-fim" cx="392" cy="34" r="8" />
+        <circle class="rota-ponto" r="5">
+          <animateMotion dur="5s" repeatCount="indefinite" rotate="auto" keyPoints="0;1" keyTimes="0;1" calcMode="linear">
+            <mpath href="#rota-caminho" />
+          </animateMotion>
+        </circle>
+      </svg>
     </section>
 
     <!-- ------------------------------- contato -------------------------------- -->
-    <section class="contact" id="contato">
-      <div class="contact-glow" aria-hidden="true"></div>
-      <p class="eyebrow"><i></i> PRONTO PARA EVOLUIR?</p>
-      <h2>Sua empresa merece<br />operar em outro <em>nível.</em></h2>
-      <p>Vamos identificar o gargalo que impede a sua operação de crescer — e desenhar o próximo passo.</p>
-      <a class="button light" href="https://instagram.com/arvisxai" target="_blank" rel="noopener">Solicitar diagnóstico estratégico <span>↗</span></a>
-
-      <div class="socials">
-        <a href="https://instagram.com/arvisxai" target="_blank" rel="noopener" aria-label="Instagram @arvisxai" title="Instagram @arvisxai">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="5.2" />
-            <circle cx="12" cy="12" r="4.1" />
-            <circle cx="17.4" cy="6.6" r="1.15" fill="currentColor" stroke="none" />
-          </svg>
-        </a>
-        <a href="https://tiktok.com/@arvisxai" target="_blank" rel="noopener" aria-label="TikTok @arvisxai" title="TikTok @arvisxai">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97a10.2 10.2 0 0 1-1.62-.93c-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
-          </svg>
-        </a>
+    <section class="contato" id="contato">
+      <div class="contato-orbitas" aria-hidden="true">
+        <span></span><span></span><span></span>
       </div>
 
-      <small>ARVISX AI • AUTOMAÇÃO • IA • CRESCIMENTO</small>
+      <div class="contato-texto">
+        <p class="etiqueta" data-decifrar>PRONTO PARA EVOLUIR?</p>
+        <h2 class="revelar">Sua empresa merece<br />operar em outro <em>nível.</em></h2>
+        <p class="revelar">Vamos identificar o gargalo que impede a sua operação de crescer — e desenhar o próximo passo.</p>
+        <a class="botao primario grande revelar" href="https://instagram.com/arvisxai" target="_blank" rel="noopener">Solicitar diagnóstico estratégico <span>↗</span></a>
+
+        <div class="redes revelar">
+          <a href="https://instagram.com/arvisxai" target="_blank" rel="noopener" aria-label="Instagram @arvisxai" title="Instagram @arvisxai">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5.2" />
+              <circle cx="12" cy="12" r="4.1" />
+              <circle cx="17.4" cy="6.6" r="1.15" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a href="https://tiktok.com/@arvisxai" target="_blank" rel="noopener" aria-label="TikTok @arvisxai" title="TikTok @arvisxai">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97a10.2 10.2 0 0 1-1.62-.93c-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+            </svg>
+          </a>
+        </div>
+
+        <small>ARVISX AI • AUTOMAÇÃO • IA • CRESCIMENTO</small>
+      </div>
     </section>
   </main>
 
   <footer class="rodape">
-    <a class="brand compacta" href="#inicio">
+    <a class="marca" href="#inicio">
       <img src="img/arvisx-marca-branca.png" alt="ARVISX AI" width="140" height="19" />
     </a>
     <p>O elo inteligente do seu ecossistema.</p>
@@ -453,14 +564,15 @@
     </nav>
   </footer>
 
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=20261019" defer></script>
+  <script src="js/hero.js?v=20261019" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ARVISX AI",
-    "url": "https://arvisx.ai/",
-    "logo": "https://arvisx.ai/img/arvisx-logo.png",
+    "url": "https://arvisx.com.br/",
+    "logo": "https://arvisx.com.br/img/arvisx-logo.png",
     "description": "Arquitetura de operações comerciais com inteligência artificial, CRM, automação, SDR, tráfego e conteúdo.",
     "sameAs": [
       "https://instagram.com/arvisxai",

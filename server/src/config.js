@@ -52,7 +52,7 @@ function booleano(chave, padrao) {
 }
 
 /* BASE_PATH é o único que precisa aceitar valor vazio: num domínio próprio
-   (arvisx.ai) o site fica na raiz, e "" é a resposta certa — não "não
+   (arvisx.com.br) o site fica na raiz, e "" é a resposta certa — não "não
    informado". Por isso não passa por texto(), que trata "" como ausente e
    devolveria o padrão. */
 function basePath() {
@@ -75,7 +75,7 @@ export const config = {
 
   /* URL pública completa, usada nas tags canonical, og: e no sitemap.
      Precisa bater com o endereço real, senão o Google indexa o errado. */
-  siteUrl: texto("SITE_URL", "https://arvisx.ai").replace(/\/+$/, ""),
+  siteUrl: texto("SITE_URL", "https://arvisx.com.br").replace(/\/+$/, ""),
 
   /* ------------------------------- pastas -------------------------------- */
   /* Site estático versionado junto do código. */

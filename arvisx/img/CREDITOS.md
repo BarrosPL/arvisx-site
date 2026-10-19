@@ -1,17 +1,5 @@
 # Créditos das imagens
 
-## Fotografia
-
-**`hero-fundo.jpg`** — torres de escritório iluminadas à noite.
-
-- Fonte: [Unsplash](https://unsplash.com/photos/modern-office-buildings-illuminated-at-night-wpejgPX8XfI)
-- Licença: [Unsplash License](https://unsplash.com/license) — uso comercial
-  liberado, atribuição não obrigatória.
-- Tratamento aplicado: recorte para 2400×1500, saturação reduzida a 80%,
-  brilho a 78% e mescla de 28% com o navy da marca (`#0f131a`). O
-  escurecimento que garante a leitura do texto está no CSS (`.hero-veu`),
-  não no arquivo.
-
 ## Capas do blog (`blog/`)
 
 Baixadas do [Wikimedia Commons](https://commons.wikimedia.org) pelo pipeline
@@ -32,8 +20,8 @@ adequada. É arte própria: navy, constelação dourada e o símbolo da marca.
 
 ## Marca ARVISX
 
-`arvisx-logo.png`, `arvisx-marca*.png`, `favicon*`, `apple-touch-icon.png` e
-`og-arvisx.jpg` foram recortados e recompostos a partir do manual da marca
+`arvisx-logo.png`, `arvisx-marca*.png`, `arvisx-simbolo-branco.webp`,
+`favicon*`, `apple-touch-icon.png` e `og-arvisx.jpg` foram recortados e recompostos a partir do manual da marca
 ARVISX AI, preservado em [`marca/arvisx-brand-board.png`](../../marca/arvisx-brand-board.png).
 
 ## Ecossistema

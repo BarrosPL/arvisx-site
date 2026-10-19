@@ -11,7 +11,7 @@ services:
       - "3000:3000"
     environment:
       BASE_PATH: ""
-      SITE_URL: https://arvisx.ai
+      SITE_URL: https://arvisx.com.br
       DATA_DIR: /app/data
       ADMIN_USER: arvisx
       ADMIN_PASSWORD: ${ADMIN_PASSWORD:?defina ADMIN_PASSWORD}

@@ -23,9 +23,14 @@ import { dataLonga, escapar, slugificar } from "./util.js";
 const ANO = new Date().getFullYear();
 
 const FONTES_GOOGLE =
-  "https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500" +
-  "&family=Manrope:wght@400;500;600;700;800" +
-  "&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap";
+  "https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800" +
+  "&family=JetBrains+Mono:wght@400;500" +
+  "&family=Manrope:wght@400;500;600;700&display=swap";
+
+/* Versão dos arquivos de estilo e script. O servidor manda o navegador
+   guardar CSS e JS por um dia; mudou um deles, muda esta data (e a mesma
+   em arvisx/index.html e arvisx/funil.html). */
+const VERSAO = "20261019";
 
 function urlPublica(caminho) {
   return `${config.siteUrl}${caminho}`;
@@ -75,42 +80,44 @@ function cabecalho({ titulo, descricao, canonical, imagem, tipo = "article" }) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="${FONTES_GOOGLE}" rel="stylesheet" />
 
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/blog.css" />
+  <link rel="stylesheet" href="../css/style.css?v=${VERSAO}" />
+  <link rel="stylesheet" href="../css/blog.css?v=${VERSAO}" />
   <link rel="alternate" type="application/rss+xml" title="Blog ARVISX AI" href="feed.xml" />
 </head>
 <body>
   <a class="pular" href="#abertura">Pular para o conteúdo</a>
-  <div class="grain" aria-hidden="true"></div>
 ${navegacao()}`;
 }
 
 function navegacao() {
   return `
-  <nav class="nav" id="nav">
-    <a class="brand" href="../" aria-label="ARVISX AI, início">
+  <header class="topo" id="topo">
+    <a class="marca" href="../" aria-label="ARVISX AI, início">
       <img src="../img/arvisx-marca-branca.png" alt="ARVISX AI" width="168" height="23" />
     </a>
 
-    <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    <button class="menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="links">
+      <span></span><span></span>
+    </button>
 
-    <div class="nav-links" id="nav-links">
+    <nav class="links" id="links" aria-label="Principal">
       <a href="../#solucoes">Soluções</a>
       <a href="../#agentes">Agentes de IA</a>
       <a href="../#clientes">Ecossistema</a>
       <a href="../funil">Guia de Funil</a>
       <a href="./">Blog</a>
-      <a class="nav-cta nav-cta-mobile" href="../#contato">Diagnóstico estratégico <b>↗</b></a>
-    </div>
+      <a class="cta cta-menu" href="../#contato">Diagnóstico estratégico <b>↗</b></a>
+    </nav>
 
-    <a class="nav-cta" href="../#contato">Diagnóstico estratégico <b>↗</b></a>
-  </nav>`;
+    <a class="cta" href="../#contato">Diagnóstico estratégico <b>↗</b></a>
+    <span class="topo-progresso" aria-hidden="true"></span>
+  </header>`;
 }
 
 function rodape() {
   return `
   <footer class="rodape">
-    <a class="brand compacta" href="../">
+    <a class="marca" href="../">
       <img src="../img/arvisx-marca-branca.png" alt="ARVISX AI" width="140" height="19" />
     </a>
     <p>O elo inteligente do seu ecossistema. © ${ANO}</p>
@@ -122,13 +129,13 @@ function rodape() {
     </nav>
   </footer>
 
-  <script src="../js/main.js" defer></script>
-  <script src="../js/blog.js" defer></script>`;
+  <script src="../js/main.js?v=${VERSAO}" defer></script>
+  <script src="../js/blog.js?v=${VERSAO}" defer></script>`;
 }
 
 function cartao(post, { destaque: emDestaque = false, prioridade = false } = {}) {
   return `
-        <article${emDestaque ? ' class="destaque"' : ""} data-categoria="${escapar(post.categoria)}">
+        <article${emDestaque ? ' class="destaque"' : ""} data-categoria="${escapar(post.categoria)}" data-luz>
           <img src="../img/blog/${escapar(post.capa)}" alt="${escapar(post.capaAlt)}"${
             prioridade ? "" : ' loading="lazy"'
           } />
@@ -250,7 +257,7 @@ ${secoes.map((s) => `        <a href="#${s.id}">${escapar(s.titulo)}</a>`).join(
   const continuar = relacionados.length
     ? `
   <section class="article-more">
-    <p class="eyebrow purple"><i></i> CONTINUE LENDO</p>
+    <p class="etiqueta">CONTINUE LENDO</p>
     <h2>Outros conteúdos</h2>
     <div class="blog-grid">${relacionados.map((p) => cartao(p)).join("")}
     </div>
@@ -267,7 +274,7 @@ ${secoes.map((s) => `        <a href="#${s.id}">${escapar(s.titulo)}</a>`).join(
   <main class="article-page">
     <header class="article-hero" id="abertura">
       <a class="voltar" href="./">← VOLTAR AO BLOG</a>
-      <p class="eyebrow"><i></i> ${escapar(post.categoria)} · ${dataLonga(post.data)} · ${escapar(post.leitura)}</p>
+      <p class="etiqueta" data-decifrar>${escapar(post.categoria)} · ${dataLonga(post.data)} · ${escapar(post.leitura)}</p>
       <h1>${escapar(post.titulo)}</h1>
       <p>${escapar(post.subtitulo)}</p>
     </header>
@@ -294,7 +301,7 @@ ${secao.blocos.map((b) => corpoDoBloco(b)).join("\n")}
 
         <div class="article-cta">
           <p>Quer transformar este assunto em resultado na sua operação?</p>
-          <a class="button primary" href="${escapar(
+          <a class="botao primario" href="${escapar(
             contato([
               ["Assunto", post.titulo],
               ["Categoria", post.categoria],
@@ -347,7 +354,7 @@ export function renderIndice(posts, emDestaque) {
 
   <main class="blog-page">
     <header class="blog-hero" id="abertura">
-      <p class="eyebrow"><i></i> BLOG ARVISX AI</p>
+      <p class="etiqueta" data-decifrar>BLOG ARVISX AI</p>
       <h1>Inteligência que<br />vira <em>receita.</em></h1>
       <p>
         O que estamos aprendendo ao conectar IA, CRM, automação e tráfego em

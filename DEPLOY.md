@@ -43,7 +43,7 @@ vez de subir quebrado.
 ### Environment
 
 ```
-SITE_URL=https://arvisx.ai
+SITE_URL=https://arvisx.com.br
 BASE_PATH=
 DATA_DIR=/app/data
 
